@@ -8,16 +8,19 @@ Consumidores Finales que quieran cosas ricas en sus mesas
 
 ## Oferta de Productos
 
-Donas con: 
+### Donas con: 
 Estilo Americano
 Gran variedad de rellenos
 Glaceados llamativos
+Donas Rellenas
 
 ## Objetivo
 
+Ser referentes en el mercado de 
+
 ## Listado de referentes
 
-Inspiradores Generales:
+### Inspiradores Generales:
 
 https://www.negrotm.com/
 
@@ -27,7 +30,7 @@ https://www.apple.com/
 
 https://www.deltafoods.com.ar/
 
-Inspiradores de Donas:
+### Inspiradores de Donas:
 
 https://www.negrotm.com/
 
@@ -50,3 +53,10 @@ Soy Jose, trabajo en administración. Me gusta mas lo que tiene que ver con la e
 **Diego Silva**
 
 Soy Diego, Diegote ,Die, Diegol. Me gusta el fútbol y la técnología. Conozco un poco de Python pero nada formnal. Mi vida siempre estuvo orientado a administración de servidores. Ahora quiero aprender Programación.
+
+## Instrucciones para clonar el proyecto
+
+En la carpeta donde se desea clonar el proyecto.
+Abrir consola Git.
+Escribir el comando: git clone https://github.com/diegosilvadh/grupo_10_donuts.git
+A disfrutar de unas ricas Donas :yum:
