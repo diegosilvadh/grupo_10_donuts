@@ -1,6 +1,35 @@
 
 🍩 Grupo_10_donuts 🍩
 
+## Temática del sitio
+
+Apuntamos al público en General. Con muchos colores y creatividad, los jóvenes son el target principal.
+Consumidores Finales que quieran cosas ricas en sus mesas
+
+## Oferta de Productos
+
+Donas con: 
+Estilo Americano
+Gran variedad de rellenos
+Glaceados llamativos
+
+## Objetivo
+
+## Listado de referentes
+
+Inspiradores Generales:
+
+https://www.negrotm.com/
+https://world.benetton.com/es/
+https://www.apple.com/
+https://www.deltafoods.com.ar/
+
+Inspiradores de Donas:
+
+https://www.negrotm.com/
+https://world.benetton.com/es/
+https://www.apple.com/
+https://www.deltafoods.com.ar/
 
 ## ¿Quienes Somos?
 
