@@ -19,16 +19,22 @@ Glaceados llamativos
 
 Inspiradores Generales:
 
-<https://www.negrotm.com/>
+https://www.negrotm.com/
+
 https://world.benetton.com/es/
+
 https://www.apple.com/
+
 https://www.deltafoods.com.ar/
 
 Inspiradores de Donas:
 
 https://www.negrotm.com/
+
 https://world.benetton.com/es/
+
 https://www.apple.com/
+
 https://www.deltafoods.com.ar/
 
 ## ¿Quienes Somos?
