@@ -59,4 +59,5 @@ Soy Diego, Diegote ,Die, Diegol. Me gusta el fútbol y la técnología. Conozco 
 En la carpeta donde se desea clonar el proyecto.
 Abrir consola Git.
 Escribir el comando: git clone https://github.com/diegosilvadh/grupo_10_donuts.git
+
 A disfrutar de unas ricas Donas :yum:
