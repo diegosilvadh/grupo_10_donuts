@@ -9,14 +9,16 @@ Consumidores Finales que quieran cosas ricas en sus mesas
 ## Oferta de Productos
 
 ### Donas con: 
-Estilo Americano
-Gran variedad de rellenos
-Glaceados llamativos
+Estilo Americano\
+Gran variedad de rellenos\
+Glaceados llamativos\
 Donas Rellenas
 
 ## Objetivo
 
-Ser referentes en el mercado de 
+Ser referentes en el mercado. Compartir nuestro gusto por lo dulce\
+con nuestros comensales. Cualquier momento, es un buen momento\
+para comer y disfrutar una dona. 
 
 ## Listado de referentes
 
@@ -40,7 +42,7 @@ https://www.apple.com/
 
 https://www.deltafoods.com.ar/
 
-## ¿Quienes Somos?
+## ¿Quienes Somos? :sunglasses:
 
 **Alejandra Lorenzo**
 
@@ -54,7 +56,6 @@ Soy Jose, trabajo en administración. Me gusta mas lo que tiene que ver con la e
 
 Soy Diego, Diegote ,Die, Diegol. Me gusta el fútbol y la técnología. Conozco un poco de Python pero nada formnal. Mi vida siempre estuvo orientado a administración de servidores. Ahora quiero aprender Programación.
 
----
 ## Instrucciones para clonar el proyecto
 
 En la carpeta donde se desea clonar el proyecto.
