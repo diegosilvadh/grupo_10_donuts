@@ -54,6 +54,7 @@ Soy Jose, trabajo en administración. Me gusta mas lo que tiene que ver con la e
 
 Soy Diego, Diegote ,Die, Diegol. Me gusta el fútbol y la técnología. Conozco un poco de Python pero nada formnal. Mi vida siempre estuvo orientado a administración de servidores. Ahora quiero aprender Programación.
 
+---
 ## Instrucciones para clonar el proyecto
 
 En la carpeta donde se desea clonar el proyecto.
