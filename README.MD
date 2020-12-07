@@ -11,14 +11,11 @@ Consumidores Finales que quieran cosas ricas en sus mesas
 ### Donas con: 
 Estilo Americano\
 Gran variedad de rellenos\
-Glaceados llamativos\
-Donas Rellenas
+Glaceados llamativos
 
 ## Objetivo
 
-Ser referentes en el mercado. Compartir nuestro gusto por lo dulce\
-con nuestros comensales. Cualquier momento, es un buen momento\
-para comer y disfrutar una dona. 
+Ser referentes en el mercado. Compartir nuestro gusto por lo dulce con nuestros comensales. Cualquier momento, es un buen momento para comer y disfrutar una dona. 
 
 ## Listado de referentes
 
@@ -30,23 +27,22 @@ https://world.benetton.com/es/
 
 https://www.apple.com/
 
-https://www.deltafoods.com.ar/
+https://www.rickysarkany.com/
+
 
 ### Inspiradores de Donas:
 
-https://www.negrotm.com/
-
-https://world.benetton.com/es/
-
-https://www.apple.com/
-
-https://www.deltafoods.com.ar/
+http://rockanddonuts.com/index.html \
+https://donasamericanas.com \
+https://www.donutpub.com \
+https://www.doughdoughnuts.com \
+https://diablo-doughnuts.wixsite.com/410dough/
 
 ## ¿Quienes Somos? :sunglasses:
 
 **Alejandra Lorenzo**
 
-Apasionada por Soda Stereo y Gustavo Cerati, amo el Rock Argentino en general, me gusta trabajar con música y ayuda a no distraerme.Trabajo en Sistemas hace muchos años, empecé desarrollando, ahora analizando y gestionando. Me encanta "necesito" analizar todo.
+Apasionada por Soda Stereo y Gustavo Cerati, amo el Rock Argentino en general, me gusta trabajar con música la cual me  ayuda a no distraerme.Trabajo en Sistemas hace muchos años. Empecé desarrollando y ahora tengo foco en el análisi y gestión. Me encanta y "necesito" analizar todo.
 
 **Jose Contte**
 
@@ -54,7 +50,7 @@ Soy Jose, trabajo en administración. Me gusta mas lo que tiene que ver con la e
 
 **Diego Silva**
 
-Soy Diego, Diegote ,Die, Diegol. Me gusta el fútbol y la técnología. Conozco un poco de Python pero nada formnal. Mi vida siempre estuvo orientado a administración de servidores. Ahora quiero aprender Programación.
+Soy Diego, Diegote ,Die, Diegol. Me gusta el fútbol y la técnología. Trabajo en Sistemas hace muchos años. Conozco un poco de Python pero nada formal. Mi vida siempre estuvo orientado a los servidores y ahora busco ampliar mis conocimientos aprendendiendo programación.
 
 ## Instrucciones para clonar el proyecto
 
