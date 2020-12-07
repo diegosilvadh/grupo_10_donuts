@@ -3,8 +3,7 @@
 
 ## Temática del sitio
 
-Apuntamos al público en General. Con muchos colores y creatividad, los jóvenes son el target principal.
-Consumidores Finales que quieran cosas ricas en sus mesas
+Gran variedad de donas, con muchos colores y creatividad. En el sitio encontrarás la posibilidad de hacer la compra, disfrutar el producto en el local, pickup o recibirlo en tu casa. 
 
 ## Oferta de Productos
 
@@ -15,7 +14,9 @@ Glaceados llamativos
 
 ## Objetivo
 
-Ser referentes en el mercado. Compartir nuestro gusto por lo dulce con nuestros comensales. Cualquier momento, es un buen momento para comer y disfrutar una dona. 
+Ser referentes en el mercado. Compartir nuestro gusto por lo dulce con nuestros comensales. Cualquier momento, es un buen momento para comer y disfrutar una dona. \
+Apuntamos al público en General. Con muchos colores y creatividad, los jóvenes son el target principal.
+Consumidores Finales que quieran cosas ricas en sus mesas
 
 ## Listado de referentes
 
