@@ -1,5 +1,5 @@
 
-<center> <h1> 🍩 Grupo_10_donuts 🍩 </h1> </center>
+<h1> 🍩 Grupo_10_donuts 🍩 </h1>
 
 ## Temática del sitio
 
@@ -33,10 +33,14 @@ https://www.rickysarkany.com/
 
 ### Inspiradores de Donas:
 
-http://rockanddonuts.com/index.html \
-https://donasamericanas.com \
-https://www.donutpub.com \
-https://www.doughdoughnuts.com \
+http://rockanddonuts.com/index.html
+
+https://donasamericanas.com
+
+https://www.donutpub.com
+
+https://www.doughdoughnuts.com
+
 https://diablo-doughnuts.wixsite.com/410dough/
 
 ## ¿Quienes Somos? :sunglasses:
