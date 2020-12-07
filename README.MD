@@ -1,5 +1,5 @@
 
-🍩 Grupo_10_donuts 🍩
+<center> <h1> 🍩 Grupo_10_donuts 🍩 </h1> </center>
 
 ## Temática del sitio
 
