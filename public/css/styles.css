@@ -1,3 +1,18 @@
 * {
     box-sizing: border-box;
 }
+
+.contendor {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* footer */
+.main-footer {
+    display: flex;
+    padding: 2em;
+ }
+.control-footer {
+    text-align: center;
+}
