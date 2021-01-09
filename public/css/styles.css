@@ -300,7 +300,10 @@ nav ul {
     list-style-type: none;
     text-align: left;
 }
-
+ul li {
+    padding: .2rem;
+    padding-left: 0;
+}
 a {
    color: gray;
    text-decoration: none;
@@ -312,10 +315,14 @@ nav p {
 
 h3 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin-left: 2rem;
-    text-align: left;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    margin-left: 0;
 }
 
+p em {
+    font-size: 0.7rem;
+}
 .container-footer {
     padding-right: 15px;
     border-right: 15px;
@@ -329,19 +336,35 @@ h3 {
 
 .main-footer {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
     border-top: 1px dotted #d9d9d9;
  }
 
 .control-footer {
-    text-align: center;
+    text-align: left;
     margin: 0.5rem;
+    padding: 0 5rem;
+
 }
 
 .icon-footer {
     margin: 0.5rem;
+    margin-left: 0;
+    display: block;
+}
+
+.button-footer {
+    padding: 10px 10px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+    display: inline-block;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: white;
+    background-color: black;
 }
 
 .extra-footer-bottom {
