@@ -409,6 +409,7 @@ p em strong{
 }
 
 .container-footer {
+    display: flex;
     padding-right: 15px;
     border-right: 15px;
     border-left: 15px;
@@ -417,6 +418,7 @@ p em strong{
     margin-left: 15px;
     color: gray;
     font-family: sans-serif;
+    position: relative;
 }
 
 .main-footer {
@@ -435,7 +437,7 @@ p em strong{
     text-align: center;
     margin: 0.5rem;
     padding: 0 5rem;
-    position:absolute;
+    /* position:absolute; */
     bottom:15%;
     width:100%;
 }
@@ -486,7 +488,8 @@ p em strong{
 }
 
 .extra-footer-bottom-login, .extra-footer-bottom-register {
-    position:absolute;
+   /* position:absolute;
     bottom:0;
+    */
     width:100%;
 }
