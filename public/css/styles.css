@@ -56,10 +56,23 @@ main{
     margin: 0 auto;
 }
 
-
+article {
+    display: flex;
+    flex-direction: column;
+}
+main article {
+    display: flex;
+    flex-direction: column;
+}
 main section article{
     background-color: #fff;    
     margin: 10px 0px;
+<<<<<<< HEAD
+=======
+    display: flex;
+    justify-content: space-between;
+
+>>>>>>> 04851b172967955ad43b02f3dd489f8bb9c3ee48
 }
 
 
