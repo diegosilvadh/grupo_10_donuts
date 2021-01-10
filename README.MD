@@ -68,3 +68,9 @@ Escribir el comando:
 git clone https://github.com/diegosilvadh/grupo_10_donuts.git
 
 A disfrutar de unas ricas Donas :yum:
+
+## Tablero de Trabajo
+
+Como equipo de trabajo y en forma unificada, decidimos llevar nuestro en Trello.
+
+Link: https://trello.com/b/8hQAiywm/grupo10donuts
