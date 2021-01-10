@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Donas - Login</title>
 </head>
-<body>
+<body class="body-login">
     <header class="main-header">
-            <img src="/img/logo.jpg" class="logo" >                        
+        <a href="/"><img src="/img/logo.jpg" class="logo"></a>                         
     </header>
     <main class="login">
         <div class="contendor">
@@ -18,15 +18,15 @@
                 <h3>¡Hola! Ingresá tu usuario, ¿Con qué vas a endulzar tu día?</h3>
                 <form action="/" method="POST">
                     <div class="field-div">
-                        <label class="label-field" for="username">Nombre de Usuario</label>
+                        <label class="label-field login-h2" for="username">Nombre de Usuario:</label>
                         <input  class="field-text" type="text" name="username" id="username"  minlength="3" placeholder="Escribe tu Usuario">
                     </div>
                     <div class="field-div">
-                        <label class="label-field" for="password">Contraseña</label>
-                        <input class="input-login" type="password" name="password" id="password" placeholder="Elegí tu contraseña" class="field-text" minlength="8" pattern=".{8,}">
+                        <label class="label-field login-h2" for="password">Contraseña:</label>
+                        <input class="field-text" type="password" name="password" id="password" placeholder="Escribí tu contraseña" class="field-text" minlength="8" pattern=".{8,}">
                     </div>
-                    <div class="field-button-login">
-                        <button class=button-login type="Send">Ingresar</button>
+                    <div class="field-div">
+                        <button class="field-button-login" type="Send">Ingresar</button>
                     </div>
                 </form>
                 <section class="create-account">

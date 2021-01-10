@@ -83,8 +83,13 @@ main section article{
 .description{
     margin-top: 20px;
     display: none;
+    color: dimgray;
 }
 
+.description-cart{
+    margin-top: 20px;
+    display: block;
+}
 
 main section article:hover .description {
     display: block;
@@ -157,10 +162,10 @@ main section article i
     justify-content: right;
     
 }
-h2 {
+/* h2 {
     margin-left: 8rem;
     
-}
+} */
 
 /* Icono hotjar */
 main section article i, .ico {
@@ -205,10 +210,11 @@ article div.main-article{
     font-size: 0.8rem;
     justify-content: flex-start;
     flex-direction: column;
+    align-items: center;
 }
 
 
-.register-h2 {
+.register-h2, .login-h2 {
     color: dimgray;
    
 }
@@ -222,6 +228,8 @@ article div.main-article{
 .field-date {
     margin: 0.3rem;
     display: flex;
+    width: 20rem;
+    
 }
 
 .archive {
@@ -249,7 +257,7 @@ article div.main-article{
 }
 
 /*login*/
-.button-login:hover {
+.button-login:hover, .button-register:hover, .field-button-login:hover{
     background-color:  #0022AA;
     border: none;
     font-style: 20px;
@@ -258,9 +266,68 @@ article div.main-article{
     border-radius: 5px;
 }
 
+/* Product cart */
+
+.product-img {
+    display:block;
+    width: 30%;
+    height: auto;
+}
+
+.main-navcart {
+        
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px dotted #d9d9d9;
+    width: 80%;
+}
+
+.sell-navcart {    
+    display: table;
+    justify-content: space-between;
+    border-top: 1px dotted #d9d9d9;
+    width: 80%;
+}
+
+.subtotal {
+    display: block;
+    width: 30%;
+    text-align: right;
+}
+
+.desc-cart {
+    display: block;
+    width: 30%;
+    text-align: right;
+}
+
+.prod-container {
+    display: flex;
+    width: 80%;
+    border-top: 1px dotted #d9d9d9;
+}
+.main-navcart ul {
+    display: flex;
+}
+.main-navcart li {
+    margin: 0 5px;
+}
+
+.products-cart {
+    display: block;
+    width: 70%;
+}
 
 /*register, login*/
-.section-register, .section-login {
+
+.body-login, .body-register {
+    background-image: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.section-login {
     margin: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -273,7 +340,33 @@ article div.main-article{
     position: relative;
 }
 
-.section-register, .section-login  h3 {
+.section-register { 
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid dimgray;
+    border-radius: 0.3rem;
+    width: 500px;
+    height: 600px;
+    margin: auto;
+    position: relative;
+}
+
+.section-productCart {
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid dimgray;
+    border-radius: 0.3rem;
+    width: 500px;
+    height: 600px;
+    margin: auto;
+    position: relative;
+}
+
+.section-register h3, .section-login h3{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
@@ -293,7 +386,16 @@ article div.main-article{
     flex-direction: row;
     justify-content: right;
     justify-items: right;
+    width: 20rem;
+    outline: 0;
+    border-width: 0 0 .1rem;
+    border-color: dimgray;
 }
+
+.field-text:focus {
+    border-color: #0022AA;
+}
+
 .button-register, .button-login {
     
     width: 14rem;
@@ -307,14 +409,20 @@ article div.main-article{
 }
 
 .field-button, .field-button-login {
-    width: 100%;
+    width: 60%;
+    height: 2rem;
     display: flex;
     justify-content: center;
     border-radius: 0.3rem;
-    
+    margin-top: 2rem;
+    display: block;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-left: auto;
 }
 
-.create-account {
+.create-account, .login-account {
     position: absolute; 
     bottom: 0px; 
 }

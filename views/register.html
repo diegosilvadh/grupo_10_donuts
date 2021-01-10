@@ -8,10 +8,73 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Donas - Register</title>
 </head>
-<body>
+<body class="body-register">
     <header class="main-header">
-            <img src="/img/logo.jpg" class="logo" >                        
+        <a href="/"><img src="/img/logo.jpg" class="logo"></a>                         
     </header>
+        <main class="register">
+            <section class="section-register">
+                <h3>Creá tu usuario</h3>
+                <form action="/" method="POST">
+                    <div class="field-div">
+                        <label class="label-field register-h2" for="fullname">Nombre y Apellido:</label>
+                        <input class="field-text" type="text" name="fullname" id="fullname" placeholder="Escribe tu nombre completo sin iniciales">
+                    </div>
+                    <div class="field-div">
+                        <label class="label-field  register-h2" for="username">Nombre de Usuario:</label>
+                        <input class="field-text" type="text" name="username" id="username" placeholder="Username">
+                    </div>
+                    <div>
+                        <label class="label-field  register-h2" for="date">Fecha de Nacimiento:</label>
+                        <input class="field-date  register-h2" type="date" name="date" id="date" placeholder="Fecha de Nacimiento">
+                    </div>
+                    <div class="field-div">
+                        <label class="label-field register-h2" for="address">Dirección:</label>
+                        <input class="field-text" type="text" name="address" id="Address" placeholder="Escribe tu dirección">
+                    </div>
+                    <div class="field-div">
+                        <label class="label-field register-h2">Intereses</label>
+                    </div>
+                    <div class="field-div">
+                        <label class="label-field register-h2"><input type="checkbox" name="categoria-interes" value="electro"> De Dulce De Leche</label>
+                    </div>
+                    <div class="field-div">
+                        <label class="label-field register-h2"><input type="checkbox" name="categoria-interes" value="moda"> De Chocolate</label>
+                    </div>
+                    <div class="field-div">
+                        <label class="label-field register-h2"><input type="checkbox" name="categoria-interes" value="hogar"> Frutal</label>
+                    </div>
+                    <div class="field-div">
+                        <label class="label-field register-h2"><input type="checkbox" name="categoria-interes" value="jugueteria"> De Crema Pastelera</label>
+                    </div>
+                    <div class="field-div">
+                        <label class="label-field register-h2"><input type="checkbox" name="categoria-interes" value="vida-sana"> Sorprendeme</label>
+                    </div>
+                    <div class="field-div">
+                    <br>
+                        <label class="label-field register-h2" for="avatar">Avatar de Usuario:</label>
+                            <input class="field-text  register-h2" type="file"  id="avatar" name="avatar" accept=".png, .jpg">
+                    </div>
+                    <div class="field-div">
+                        <label class="label-field register-h2" for="password">Contraseña:</label>
+                        <input class="field-text" type="password" name="password" id="password" minlength="8" pattern=".{8,}">
+                    </div>
+                    <div class="field-div">
+                        <label class="label-field register-h2" for="confirm-password">Confirmar Contraseña:</label>
+                        <input class="field-text" type="password" name="confirm-password" id="confirm-password" minlength="8" pattern=".{8,}">
+                    </div>
+                    <div class="field-div">
+                        <button class="button-register" type="Send">Creá tu Cuenta</button>
+                        <button class="button-register" type="Reset">Rellena de Nuevo</button>
+                    </div>
+                    </div>
+                </form>
+                <section class="login-account">
+                    <h3>¿Ya tenes usuario?</h3>
+                    <a href="/login">Endulza tu día <i class="fas fa-stroopwafel"></i></a></li>
+                </section>
+            </section>  
+        </main>
     <footer>
         <div class="container-footer">
                 <div class="control-footer-register">
