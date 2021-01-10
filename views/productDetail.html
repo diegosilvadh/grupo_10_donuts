@@ -13,7 +13,7 @@
             
         <div class="logo-search">
             <div class="main-header-top-bar">
-                <img src="/img/logo.jpg" class="logo" >       
+                <a href="/"><img src="/img/logo.jpg" class="logo"></a>    
                 <div class="search">
                     <input type="text" placeholder="Search">
                     <div class="icono">
@@ -30,7 +30,7 @@
         <nav class="main-navbar">
             <ul class="left-navbar">
                 <li><a href="#">Donas</a></li>
-                <li><a href="#">Promociones</a></li>
+                <li><a href="/promotions">Promociones </a></li>
                 <li><a href="#">Ayuda</a></li>
             </ul>
 
@@ -42,6 +42,110 @@
         </nav>
     
     </header>
+
+    <main id="main" class="">
+        <div class="product-main">
+            <div class="proddesc"> 
+                <!--imagen dona grande-->
+                <a href=/img/dona-turquesa.jpg> <!-- para hacer click en la dona y que abra solo la imagen -->
+                    
+                    <img src="/img/dona-turquesa.jpg" class="img-dona" alt="" 
+                    title="Dona Turquesa"> 
+                
+                </a> 
+            </div> <!-- prodimg-proddesc -->
+                      
+            <div class="all">
+                <div class="product-info">     
+                    <h1 class="product-title"> 
+                        <!-- Titulo principal arriba a la izquierda -->
+                        Dona Turquesa
+                    </h1>
+ 
+                    <p class="price">
+                        <del>
+                            <span class="Price-amount">
+                                    <span class="Price-currencySymbol">$
+                                    </span>100.00
+                            </span>
+                        </del> 
+                        <ins>
+                            <span class="Price-amount">
+                                    <span class="Price-currencySymbol">$
+                                    </span>60.00
+                            </span>
+                        </ins>
+                    </p>
+                </div> <!-- product-info -->
+
+                <div class="product-short-description">
+                    <p>Nuestras mejores donas para disfrutar un agradable momento ¿Con qué vas a endulzar tu día?</p>
+                    <p></p>
+                    <div class="row"><br>
+                        <div class="div-description">
+                            <div class="div-description2">            
+                                Donas Turquesa <br>
+                                Glass y Manzana<br>
+                                Deliciosas chispitas de frutilla
+                            </div>
+                        </div>
+                        <div class="div-description">
+                            <div class="col-inner">
+                            </div><br>
+                            <strong>¡Disfrutalas mucho!</strong>
+                            <p></p>
+                        </div>
+                        <p class="important-1">
+                            Recuerda que tenemos envío a domicilio.
+                        </p>
+                        <p class="important-2">
+                            Solo tenés que elegir las que más te deleiten, y nosotros te las enviamos!
+                        </p>
+                        <form class="cart" action="/" method="POST" >
+                            <div class="add-to-cart">
+                                
+                                <div class="price-wrapper">
+                                    <p class="price">
+                                        <del>
+                                            <span class="Price-amount">
+                                                <!--segundo precio-->
+                                                <span class="Price-currencySymbol">$
+                                                </span>100.00
+                                            </span>
+                                        </del>
+                                        <ins>
+                                            <span class="Price-amount">
+                                                <span class="Price-currencySymbol">$
+                                                </span>60.00
+                                            </span>
+                                        </ins>
+                                    </p>
+                                </div>
+                                   
+                                <div class="buttons_added">		
+                                        <label class="quantity-to-add" for="quantity" Dona Turquesa>
+                                        </label>
+                                        <input type="number" id="quantity" class="input-quantity" step="1" min="1" max="" name="quantity" 
+                                        value="1" title="Cantidad" size="3" placeholder="" inputmode="numeric">
+
+                                </div>
+                                <br>
+                                
+                                <button type="submit" name="add-to-cart" value="add-to-cart" class="button_add_to_cart">Añadir al carrito
+                                </button> 
+                                
+                                             
+                            </div>	<!--add-to-cart-->
+                        </form>
+                        <p class="important-1">El minimo de compra es de $125.00 por orden, mira nuestras promociones 
+                            <a class="important-2" href="/views/promotions.html">¡Aquí!</a>
+                        </p> <br>   ¡Endulzando tus Recuerdos!
+                    </div> <!--row-->
+                </div>   <!--product-short-description"-->       
+            </div> <!--all-->
+        </div> <!--product-main-->                
+    </main>     
+
 
     <footer>
         <div class="container-footer">
