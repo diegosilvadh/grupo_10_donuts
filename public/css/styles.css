@@ -249,7 +249,7 @@ article div.main-article{
 }
 
 /*login*/
-.button-login:hover {
+.button-login:hover, .button_add_to_cart:hover {
     background-color:  #0022AA;
     border: none;
     font-style: 20px;
@@ -294,7 +294,7 @@ article div.main-article{
     justify-content: right;
     justify-items: right;
 }
-.button-register, .button-login {
+.button-register, .button-login,  {
     
     width: 14rem;
     height: 2rem;
@@ -303,6 +303,7 @@ article div.main-article{
     background-color: rgb(173, 172, 172);
     border-radius: 0.3rem;
     border-color: rgb(173, 172, 172);
+    color:white;
 
 }
 
@@ -458,7 +459,7 @@ p em strong{
     padding-left: 15px;
 }
 
-.button-footer {
+.button-footer, .button_add_to_cart {
     padding: 10px 10px;
     text-align: center;
     display: inline-block;
@@ -492,4 +493,63 @@ p em strong{
     bottom:0;
     */
     width:100%;
+}
+
+
+/*productDetail*/
+
+ 
+.product-main {
+    display: flex;
+    width: 100%;
+   
+}
+
+.img-dona {
+    width: 500px;
+    display: block;
+}
+
+.all {
+    display: flex;
+    display: block;
+}
+
+.product-images {
+    width: 400px;
+}
+
+.product-info {
+    padding-top: 10px;
+    display: block;
+    flex-direction: column;
+    width: 500px;
+ 
+}
+
+.product-short-description{
+    display: block;
+    width: 500px;
+    flex-direction: column;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    flex:1;
+}
+
+.important-1{
+    color: #4ca0ff;
+    font-style:oblique;
+    
+}
+.important-2 {
+    color: #ef2b4d  ;
+    font-style:oblique;
+}
+.add-to-cart {
+    height: auto;
+}
+.input-quantity {
+    width: 4rem;
+    margin-left: 1rem;
 }

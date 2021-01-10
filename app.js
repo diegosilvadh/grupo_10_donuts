@@ -26,3 +26,6 @@ app.get('/productDetail', (req,res)=>{
 app.get('/productCart', (req,res)=>{
     res.sendFile(__dirname + '/views/productCart.html');
 });
+app.get('/productCart', (req,res)=>{
+    res.sendFile(__dirname + '/views/promotions.html');
+});
