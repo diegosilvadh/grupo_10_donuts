@@ -257,11 +257,7 @@ article div.main-article{
 }
 
 /*login*/
-<<<<<<< HEAD
-.button-login:hover, .button-register:hover, .field-button-login:hover{
-=======
-.button-login:hover, .button_add_to_cart:hover {
->>>>>>> 93d413203a7855e3f1fbd359077931b60c4e8716
+.button-login:hover, .button-register:hover, .field-button-login:hover, .button_add_to_cart:hover {
     background-color:  #0022AA;
     border: none;
     font-style: 20px;
@@ -395,16 +391,12 @@ article div.main-article{
     border-width: 0 0 .1rem;
     border-color: dimgray;
 }
-<<<<<<< HEAD
 
 .field-text:focus {
     border-color: #0022AA;
 }
 
 .button-register, .button-login {
-=======
-.button-register, .button-login,  {
->>>>>>> 93d413203a7855e3f1fbd359077931b60c4e8716
     
     width: 14rem;
     height: 2rem;
