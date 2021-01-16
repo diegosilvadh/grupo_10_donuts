@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/99f3138e9d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Donas - Login</title>
+</head>
+<body class="body-login">
+    <header class="main-header">
+        <a href="/"><img src="/img/logo.jpg" class="logo"></a>                         
+    </header>
+    <main class="login">
+        <div class="contendor">
+            <section class="section-login">
+                <h3>¡Hola! Ingresá tu usuario, ¿Con qué vas a endulzar tu día?</h3>
+                <form action="/" method="POST">
+                    <div class="field-div">
+                        <label class="label-field login-h2" for="username">Nombre de Usuario:</label>
+                        <input  class="field-text" type="text" name="username" id="username"  minlength="3" placeholder="Escribe tu Usuario">
+                    </div>
+                    <div class="field-div">
+                        <label class="label-field login-h2" for="password">Contraseña:</label>
+                        <input class="field-text" type="password" name="password" id="password" placeholder="Escribí tu contraseña" class="field-text" minlength="8" pattern=".{8,}">
+                    </div>
+                    <div class="field-div">
+                        <button class="field-button-login" type="Send">Ingresar</button>
+                    </div>
+                </form>
+                <section class="create-account">
+                    <h3>¿Eres un nuevo Usuario?</h3>
+                    <a href="/register">Creá tu cuenta <i class="fas fa-user-circle"></i></a></li>
+                </section>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container-footer">
+                <div class="control-footer-login">
+                    <nav>
+                        <h3>SEGUINOS EN</h3>
+                        <div class="icon-footer-login"><i class="fab fa-facebook-f"></i>
+                            <p>Facebook</p>
+                        </div>
+                        <div class="icon-footer-login"><i class="fab fa-instagram"></i>
+                            <p>Instagram</p>
+                        </div>
+                        <div class="icon-footer-login"><i class="fab fa-twitter"></i>
+                            <p>Twitter</p>
+                        </div>
+                        <div class="icon-footer-login"><i class="fab fa-tiktok"></i>
+                            <p>Tik Tok</p>
+                        </div>
+                        <div class="icon-footer-login"><i class="fab fa-pinterest"></i>
+                            <p>Pinterest</p>
+                        </div>
+                    </nav>
+                </div>  
+            </div>
+            <div class="extra-footer-bottom extra-footer-bottom-login">
+                <p>&copy; 2021 grupo_10_donuts. Todos los derechos reservados</p>
+            </div>
+            </footer>
+        </div>
+    </footer>     
+</body>
+</html>
