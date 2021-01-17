@@ -429,64 +429,6 @@ article div.main-article{
 }
 
 
-@media (min-width: 480px){
-      
-
-    main section div.products{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-    
-    main section div.products article{
-        width: 45%;
-    }
-
-    .price,
-    .discount{
-        width: 50%;
-    }
-}
-
-@media (min-width: 769px){
-    main section div.products article{
-        width: 22%;
-    }
-    .main-header-top-bar {
-        
-        display: flex;
-        justify-content: space-between;
-    }
-    .copy-header {
-        width: 350px;
-        text-align: right;
-    }
-    .hamburguer-button {
-        display: none;
-    }
-    .main-navbar {
-        
-        display: flex;
-        justify-content: space-between;
-    }
-    .main-navbar ul {
-        display: flex;
-    }
-    .main-navbar li {
-        margin: 0 5px;
-    }
-}
-@media (min-width: 1200px) {
-    .copy-header {
-        width: 100%;
-        text-align: right;
-        margin: 10px 0;
-        padding: 0px 10px;
-    }
-}
-
 /* footer */
 
 nav ul { 
@@ -597,9 +539,6 @@ p em strong{
 }
 
 .extra-footer-bottom-login, .extra-footer-bottom-register {
-   /* position:absolute;
-    bottom:0;
-    */
     width:100%;
 }
 
