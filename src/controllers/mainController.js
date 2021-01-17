@@ -25,7 +25,7 @@ const controller = {
         res.render('products/productCart');
 },
     promotions:  (req, res) => {
-        res.render('products/promotions');
+        res.render('products/promotion');
 },
 };
 
