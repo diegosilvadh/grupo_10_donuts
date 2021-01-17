@@ -1,10 +1,10 @@
 // Modulos y Constantes
 
 const path = require('path');
-//const menu = require('../databases/menu')
+const products = require('../database/products')
 const controller = {
     index: (req,res) => {
-        res.render('index');
+        res.render('index',{products});
     },
 
 // Controller Users
