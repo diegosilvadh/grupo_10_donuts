@@ -10,7 +10,7 @@ body{
 }
 
 .main-header {
-    background-color: ff7fbf; /* Cambio color: #fa71b5, e50072, ff3298, #ff7fbf */
+    background-color: #ff7fbf; /* Cambio color: #fa71b5, e50072, ff3298, #ff7fbf */
     padding: 10px; /* Cambio Padding */
     position: relative;
     top: 0;
