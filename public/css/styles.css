@@ -10,8 +10,8 @@ body{
 }
 
 .main-header {
-    background-color:pink;
-    padding: 20px; 
+    background-color: ff7fbf; /* Cambio color: #fa71b5, e50072, ff3298, #ff7fbf */
+    padding: 10px; /* Cambio Padding */
     position: relative;
     top: 0;
     z-index: 100;
@@ -448,6 +448,16 @@ article div.main-article{
     .discount{
         width: 50%;
     }
+
+    /* .hamburguer-button {
+        display: block;
+    }
+
+    .search {
+        display: none;
+    } */
+
+
 }
 
 @media (min-width: 769px){
@@ -466,6 +476,7 @@ article div.main-article{
     .hamburguer-button {
         display: none;
     }
+
     .main-navbar {
         
         display: flex;
