@@ -27,6 +27,9 @@ const controller = {
     promotions:  (req, res) => {
         res.render('products/promotion');
 },
+abmProducts:  (req, res) => {
+    res.render('products/abmproducts');
+},
 };
 
 module.exports = controller

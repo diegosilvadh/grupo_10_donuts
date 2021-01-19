@@ -12,7 +12,7 @@ router.get('/register', mainController.register);
 router.get('/productDetail', mainController.productDetail);
 router.get('/productCart', mainController.productCart);
 router.get('/promotions', mainController.promotions);
-
+router.get('/abmProducts', mainController.abmProducts);
 
 // Exporta modulo
 

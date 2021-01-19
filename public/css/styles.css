@@ -320,14 +320,14 @@ article div.main-article{
 
 /*register, login*/
 
-.body-login, .body-register {
+.body-login, .body-register, .body-abm {
     background-image: url("../img/background.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
 }
-.section-login {
+.section-login, .section-abm {
     margin: 0.5rem;
     display: flex;
     flex-direction: column;

@@ -5,11 +5,11 @@ const app = express();
 //Definimos el path de las rutas
 
 const mainRouter = require('./routes/mainRouter');
-app.use(express.static('./../public'));
+app.use(express.static('./public'));
 // Template engine
 
 app.set('view engine', 'ejs')
-app.set('views', './views')
+app.set('views', './src/views')
 
 // Levantamos el WebServer
 
@@ -25,3 +25,4 @@ app.use('/login', mainRouter);
 app.use('/productDetail', mainRouter);
 app.use('/productCart', mainRouter);
 app.use('/promotions', mainRouter);
+app.use('/abmProducts', mainRouter);
