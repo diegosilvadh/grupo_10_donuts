@@ -257,7 +257,7 @@ article div.main-article{
 }
 
 /*login*/
-.button-login:hover, .button-register:hover, .field-button-login:hover, .button_add_to_cart:hover {
+.button-login:hover, .button-register:hover, .button-register:hover, .field-button-login:hover, .button_add_to_cart:hover {
     background-color:  #0022AA;
     border: none;
     font-style: 20px;
@@ -334,7 +334,8 @@ article div.main-article{
     align-items: center;
     border: 1px solid dimgray;
     border-radius: 0.3rem;
-    width: 500px;
+    width: 95%;
+    max-width: 500px;
     height: 400px;
     margin: auto;
     position: relative;
@@ -396,7 +397,7 @@ article div.main-article{
     border-color: #0022AA;
 }
 
-.button-register, .button-login {
+.button-register, .button-login, .button-abm {
     
     width: 14rem;
     height: 2rem;
