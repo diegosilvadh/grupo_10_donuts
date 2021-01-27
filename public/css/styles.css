@@ -498,6 +498,7 @@ article div.main-article{
     background-attachment: fixed;
     background-position: center;
 }
+
 @media (min-width: 1200px) {
     .copy-header {
         width: 100%;
