@@ -469,10 +469,10 @@ p em strong{
   
     padding-right: 15px;
     border-right: 15px;
-    border-left: 15px;
-    padding-left: 15px;
+    /*border-left: 15px; pruebo para ver el responsive footer*/
+    /*padding-left: 15px; pruebo para ver el resposive footer*/
     margin-right: 15px;
-    margin-left: 15px;
+    /*margin-left: 15px; pruebo para ver el responsive footer*/
     color: gray;
     font-family: sans-serif;
     position: relative;
@@ -488,6 +488,9 @@ p em strong{
     text-align: left;
     margin: 0.5rem;
     padding: 0 5rem;
+    width: 33%;/*agrego para resposive footer*/
+    display: flex;/*agrego para resposive footer*/
+    flex-direction: column;/*agrego para resposive footer*/
 }
 
 .control-footer-login, .control-footer-register{
