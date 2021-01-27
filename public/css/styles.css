@@ -666,7 +666,7 @@ p em strong{
     .hamburguer-button {
         display: none;
     }
-/*
+
     .main-navbar {   
         display: flex;
         justify-content: space-between;
@@ -677,10 +677,8 @@ p em strong{
     .main-navbar li {
         margin: 0 5px;
     }
-    */
-    .search {
-      /*  margin-right: 28rem;  el search junto al logo en este media*/
-    }
+    /*.search {
+        margin-right: 28rem;  el search junto al logo en este media*/
 }
 
 @media (min-width: 1200px) {
@@ -699,5 +697,5 @@ p em strong{
     }
     .main-navbar li {
         margin: 0 5px;
-    }
+    } 
 }
