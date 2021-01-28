@@ -476,6 +476,7 @@ p em strong{
     color: gray;
     font-family: sans-serif;
     position: relative;
+    
 }
 
 .main-footer {
@@ -488,9 +489,12 @@ p em strong{
     text-align: left;
     margin: 0.5rem;
     padding: 0 5rem;
-    width: 33%;/*agrego para resposive footer*/
+    /*
+    width: 33%;agrego para resposive footer
+    */
     display: flex;/*agrego para resposive footer*/
     flex-direction: column;/*agrego para resposive footer*/
+
 }
 
 .control-footer-login, .control-footer-register{
