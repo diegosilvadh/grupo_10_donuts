@@ -569,12 +569,11 @@ p em strong{
 }
 
 .img-dona {
-    width: 500px;
+    width: 50vw; /* modifico de 500 px a 50 vw para que sea responsive*/
     display: block;
 }
 
 .all {
-    display: flex;
     display: block;
 }
 
@@ -586,7 +585,7 @@ p em strong{
     padding-top: 10px;
     display: block;
     flex-direction: column;
-    width: 500px;
+    /*width: 500px; desproporcionado no responsive*/
  
 }
 
