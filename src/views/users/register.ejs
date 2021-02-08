@@ -52,7 +52,7 @@
                     <div class="field-div">
                     <br>
                         <label class="label-field register-h2" for="avatar">Avatar de Usuario:</label>
-                            <input class="field-text  register-h2" type="file"  id="avatar" name="avatar" accept=".png, .jpg">
+                            <input class="field-text  register-h2" type="file"  id="avatar" name="avatar" accept=".png, .jpg" style="color: transparent">
                     </div>
                     <div class="field-div">
                         <label class="label-field register-h2" for="password">Contraseña:</label>
@@ -62,17 +62,28 @@
                         <label class="label-field register-h2" for="confirm-password">Confirmar Contraseña:</label>
                         <input class="field-text" type="password" name="confirm-password" id="confirm-password" minlength="8" pattern=".{8,}">
                     </div>
+                    <!-- Responsive
                     <div class="field-div">
                         <button class="button-register" type="Send">Creá tu Cuenta</button>
                         <button class="button-register" type="Reset">Rellena de Nuevo</button>
                     </div>
+                
                     </div>
+                    -->
                 </form>
-                <section class="login-account">
+            <!-- Responsive-->    
+             </section>  
+             <section>   
+                <div class="login-account">
                     <h3>¿Ya tenes usuario?</h3>
                     <a href="/login">Endulza tu día <i class="fas fa-stroopwafel"></i></a></li>
-                </section>
-            </section>  
+                </div>
+                <div class="field-div">
+                    <button class="button-register" type="Send">Creá tu Cuenta</button>
+                    <button class="button-register" type="Reset">Rellena de Nuevo</button>
+                </div>
+            </section>  <!--Responsive Register-->
+        
         </main>
     <!--incluimos partials del footerUser-->
     <%- include('./../partials/footerUser') %>

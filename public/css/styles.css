@@ -335,24 +335,34 @@ article div.main-article{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid dimgray;
+    /*border: 1px solid dimgray; Responsive login */
     border-radius: 0.3rem;
     width: 95%;
-    max-width: 500px;
+    /*max-width: 500px; Responsive login */
     height: 400px;
     margin: auto;
     position: relative;
 }
 
+/*Responsive login */
+.section-login form {
+    border-style: ridge;
+}
+/*Responsive register */
+.section-register form {
+    border-style: ridge;
+}
+
+/*Responsive register */
 .section-register { 
     margin: 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid dimgray;
+    /*border: 1px solid dimgray; Responsive Register */
     border-radius: 0.3rem;
-    width: 500px;
-    height: 600px;
+    width: 95%;    /*width: 500px; Responsive Register */
+    /*height: 600px; Responsive Register */
     margin: auto;
     position: relative;
 }
@@ -378,11 +388,13 @@ article div.main-article{
 }
 
 .label-field {
-    margin: 0.3rem
+    margin: 0.3rem;
+    width: 150px; /*Responsive login */
 }
 
 .field-div {
     display: flex;
+    flex-direction: column; /* seteo filas por default Responsive Login*/
 }
 .field-text {
     margin: 0.3rem;
@@ -390,7 +402,7 @@ article div.main-article{
     flex-direction: row;
     justify-content: right;
     justify-items: right;
-    width: 20rem;
+    width: 200px; /* Cambio 20 rem por 200px Responsive login */
     outline: 0;
     border-width: 0 0 .1rem;
     border-color: dimgray;
@@ -428,13 +440,13 @@ article div.main-article{
 }
 
 .create-account, .login-account {
-    position: absolute; 
+  /*  position: absolute; responisve*/
     bottom: 0px; 
 }
 
-
-
-
+.login-account {
+    text-align: center;
+}
 /* footer */
 
 nav ul { 
@@ -623,6 +635,13 @@ p em strong{
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+}
+
+
+@media (min-width:380px){
+    .field-div{
+    flex-direction: row; /*si es muy pequeño lo paso a columnas Responsive Login*/ 
+    }
 }
 
 @media (min-width: 480px){
