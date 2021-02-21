@@ -8,7 +8,7 @@ const productsTable = jsonTable('products');
 const controller = {
     index: (req, res) => {
         let products = productsTable.all()
-
+        console.log(products);
         res.render('products/index', { 
             title: 'Listado de Productos', 
             products      
