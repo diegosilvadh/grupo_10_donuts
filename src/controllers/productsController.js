@@ -17,6 +17,20 @@ const controller = {
     create: (req, res) => {
         res.render('products/create');
     },
+    store: (req, res) => {
+        // Generamos el nuevo Producto
+        let product = req.body;
+
+        if (req.file) {
+            product.images = "/img/" + req.file.filename;
+        } else {
+            res.send('La imagen es obligatoria');
+        }
+        
+        let productId = productsTable.create(product);
+        
+        res.redirect('/products/' + productId);
+    },
     show: (req, res) => {
         let product = productsTable.find(req.params.id);
 
@@ -25,6 +39,11 @@ const controller = {
         } else {
             res.send('No encontré el producto');
         }
+    },
+    edit: (req, res) => {
+        let product = productsTable.find(req.params.id);
+
+        res.render('products/edit', { product });
     },
 
 // Controller Products

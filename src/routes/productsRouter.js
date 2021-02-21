@@ -3,11 +3,27 @@
 const express = require('express');
 const router = express.Router();
 const productsController = require('../controllers/productsController');
+const path = require('path');
+
+const multer = require('multer');
+const storage = multer.diskStorage({
+    destination: (req, file, callback) => {
+        callback(null, path.join(__dirname, '../../public/img/'));
+    },
+    filename: (req, file, callback) => {
+        // Mejor usar algo como esto en lugar de Date.now()
+        // https://www.npmjs.com/package/uuidv4
+        callback(null, 'product-' + Date.now() + path.extname(file.originalname));
+    }
+});
+const upload = multer({ storage });
 
 // Rutas de Controller
 router.get('/', productsController.index);
 router.get('/create', productsController.create);
 router.get('/:id', productsController.show);
+router.post('/', upload.single('images'), productsController.store);
+router.get('/:id/edit', productsController.edit);
 router.get('/productDetail', productsController.productDetail);
 router.get('/productCart', productsController.productCart);
 router.get('/promotions', productsController.promotions);
