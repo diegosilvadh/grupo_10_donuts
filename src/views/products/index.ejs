@@ -10,17 +10,21 @@
     <%- include('./../partials/header') %>
 
         <main>
-            <div class="contendor">
+            <div class="container">
                 <section>
                     <h2 class="title-h2">Listado de Productos</h2>
-                    <div class="products">
+                    <div >
         <!-- Menu en Base de datos -->
                         <% products.forEach(product => { %> 
-                        <article> 
-                            <img class="product_img" src= <%= product.images %> alt= <%= product.name%> >
-                            <div>
+                        <article class="card"> 
+                            <p><strong>Nombre: <%= product.name %></strong></p>
+                            <div class="card-left">
+                                <figure>
+                                    <img class="product_img" src= <%= product.images %> alt= <%= product.name%> >
+                                </figure>
+                            </div>
+                            <div class="card-content">
                                 <p>ID: <%= product.id %></p>
-                                <p>Nombre: <%= product.name %></p>
                                 <p>Precio:<%= product.price %></p>
                                 <p>Descuento: <%= product.discountValue %></p>
                                 <p>Descripción:<%= product.description %></p>
