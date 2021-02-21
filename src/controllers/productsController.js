@@ -14,6 +14,18 @@ const controller = {
             products      
         });
     },
+    create: (req, res) => {
+        res.render('products/create');
+    },
+    show: (req, res) => {
+        let product = productsTable.find(req.params.id);
+
+        if ( product ) {
+            res.render('products/detail', { product });
+        } else {
+            res.send('No encontré el producto');
+        }
+    },
 
 // Controller Products
 

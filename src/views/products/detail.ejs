@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <%- include('./../partials/head') %>
+        <%- include('./../partials/head') %> 
         <link rel="stylesheet" href="../css/styles.css">
         <title>Donas</title>
     </head>
@@ -13,10 +13,9 @@
         <main>
             <div class="container">
                 <section>
-                    <h2 class="title-h2">Listado de Productos</h2>
+                    <h2 class="title-h2">Producto</h2>
                     <div >
         <!-- Menu en Base de datos -->
-                        <% products.forEach(product => { %> 
                         <article class="card"> 
                             <p><strong>Nombre: <%= product.name %></strong></p>
                             <div class="card-left">
@@ -31,7 +30,6 @@
                                 <p>Descripción:<%= product.description %></p>
                             </div>
                         </article>
-                        <%});%>
                             
        <!-- Fin Menu en Base de datos -->
                     </div>
