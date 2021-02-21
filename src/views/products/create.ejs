@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./../partials/head') %> 
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Creá tu Dona</title>
+<body>
+    <!--incluimos partials del header-->
+    <%- include('./../partials/header') %>
+
+    <main>
+        <div class="container">
+            <section>
+                <div class="columns is-centered"><!--REVISAR-->
+                    <div class="column is-6"><!--REVISAR-->
+                        <h2 class= "title-h2">Nuevo producto</h2>
+                        <form action="/products" method="POST" enctype="multipart/form-data">
+
+                            <div class="field-div">
+                                <label for="id">Id</label>
+                                <div class="field-text">
+                                    <input type="text" name="id" id="id" value="">
+                                </div>
+                               
+                            </div>
+                            
+                            <div class="field-div">
+                                <label for="name">Nombre</label>
+                                <div class="field-text">
+                                    <input type="text" name="name" id="name" value="">
+                                </div>
+                               
+                            </div>
+
+                            <div class="field-div">
+                                <label for="price">Precio</label>
+                                <div class="field-text">
+                                    <input type="text" name="price" id="price" value="">
+                                </div>
+                                
+                            </div>
+
+                            <div class="field-div">
+                                <label for="discountValue">Descuento</label>
+                                <div class="field-text">
+                                    <input type="text" name="discountValue" id="discountValue" value="">
+                                </div>
+                              
+                            </div>
+
+                            <div class="field-div">
+                                <label for="discount">Tiene descuento</label>
+                                <div class="field-text">
+                                    <input type="discount" name="discount" id="discount">
+                                </div>
+                              
+                            </div>
+
+                            <div class="field-div">
+                                <label for="images">Imagen de producto</label>
+                                <div class="field-text">
+                                    <input type="file" name="images" id="images">
+                                </div>
+                              
+                            </div>
+
+                            
+                            <div class="field-div">
+                                <label for="description">Descripción</label>
+                                <div class="field-text">
+                                    <input type="description" name="description" id="description">
+                                </div>
+                              
+                            </div>
+
+                            <div class="field-div">
+                                <div class="field-text">
+                                    <button type="submit">Crear producto</button>
+                                </div>
+                            </div> 
+                        </form>  
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
