@@ -42,7 +42,7 @@ const controller = {
     },
     edit: (req, res) => {
         let product = productsTable.find(req.params.id);
-
+        console.log (product);
         res.render('products/edit', { product });
     },
 
