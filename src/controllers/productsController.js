@@ -45,6 +45,32 @@ const controller = {
 
         res.render('products/edit', { product });
     },
+    update: (req, res) => {
+        let product = req.body;
+        product.id = Number(req.params.id);
+
+        // Si viene una imagen nueva la guardo
+        if (req.file) {
+            product.images = req.file.filename;
+        // Si no viene una imagen nueva, busco en base la que ya había
+        } else {
+            oldProduct = productsTable.find(product.id);
+            product.images = oldProduct.images;
+        }
+
+        if (req.file) {
+            product.iconImage = req.file.filename;
+        // Si no viene una imagen nueva, busco en base la que ya había
+        } else {
+            oldProduct = productsTable.find(product.id);
+            product.iconImage = oldProduct.iconImage;
+        }
+
+
+        let productId = productsTable.update(product);
+
+        res.redirect('/products/' + productId);
+    },
 
 // Controller Products
 
