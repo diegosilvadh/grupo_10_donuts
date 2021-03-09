@@ -2,13 +2,20 @@
 
 const path = require('path');
 const products = require('../database/products')
+
+// Modulos y Constantes
+
+//const fs = require('fs');
+//const path = require('path');
+//const jsonTable = require('../database/jsonTable');
+//const productsTable = jsonTable('products');
+
 const controller = {
     index: (req,res) => {
         res.render('index',{products});
     },
 
 // Controller Users
-
     login: (req,res) => {
         res.render('users/login');
     },

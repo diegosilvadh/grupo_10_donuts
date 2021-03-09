@@ -25,10 +25,11 @@ router.get('/:id', productsController.show);
 router.post('/', upload.single('images'), productsController.store);
 router.get('/:id/edit', productsController.edit);
 router.put('/:id', upload.single('images'), productsController.update);
-router.get('/productDetail', productsController.productDetail);
-router.get('/productCart', productsController.productCart);
-router.get('/promotions', productsController.promotions);
-router.get('/abmProducts', productsController.abmProducts);
+router.delete('/:id', productsController.destroy);
+//router.get('/productDetail', productsController.productDetail);
+//router.get('/productCart', productsController.productCart);
+//router.get('/promotions', productsController.promotions);
+//router.get('/abmProducts', productsController.abmProducts);
 
 //Rutas de Formulario 
 

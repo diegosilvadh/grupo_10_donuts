@@ -22,7 +22,7 @@ const controller = {
         let product = req.body;
 
         if (req.file) {
-            product.images = "/img/" + req.file.filename;
+            product.images = req.file.filename;
         } else {
             res.send('La imagen es obligatoria');
         }
@@ -42,8 +42,12 @@ const controller = {
     },
     edit: (req, res) => {
         let product = productsTable.find(req.params.id);
-        console.log (product);
-        res.render('products/edit', { product });
+
+        if ( product ) {
+            res.render('products/edit', { product });
+        } else {
+            res.send('No encontré el producto');
+        }
     },
     update: (req, res) => {
         let product = req.body;
@@ -70,6 +74,13 @@ const controller = {
         let productId = productsTable.update(product);
 
         res.redirect('/products/' + productId);
+    },
+    destroy: (req, res) => {
+        //let products = productsTable.all()
+
+        productsTable.delete(req.params.id);
+
+        res.redirect('/products');
     },
 
 // Controller Products

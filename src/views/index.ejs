@@ -13,12 +13,13 @@
             <img src="img/banner2.png" alt="Banner de ofertas">
         </section>
         <main>
-            <div class="contendor">
+            <div class="contenedor">
                 <section>
                     <h2 class="title-h2">Elige tu Dona</h2>
                     <div class="products">
         <!-- Menu en Base de datos -->
-                        <% products.forEach(product => { %> 
+                        <% products.forEach(product => { 
+                            console.log("kk3") %> 
                         <article> 
                             <img class="product_img" src= <%= product.images %> alt= <%= product.name%> >
                             <div class="main-article">

@@ -18,7 +18,7 @@
                             <div class="field-div">
                                 <label for="id">Id</label>
                                 <div class="field-text">
-                                    <input type="text" name="id" id="id" value="">
+                                    <input type="text" name="id" id="id" value="<%= product.id %>">
                                 </div>
                                
                             </div>
@@ -26,7 +26,7 @@
                             <div class="field-div">
                                 <label for="name">Nombre</label>
                                 <div class="field-text">
-                                    <input type="text" name="name" id="name" value="">
+                                    <input type="text" name="name" id="name" value="<%= product.name %>">
                                 </div>
                                
                             </div>
@@ -34,7 +34,7 @@
                             <div class="field-div">
                                 <label for="price">Precio</label>
                                 <div class="field-text">
-                                    <input type="text" name="price" id="price" value="">
+                                    <input type="text" name="price" id="price" value="<%= product.price %>">
                                 </div>
                                 
                             </div>
@@ -42,7 +42,7 @@
                             <div class="field-div">
                                 <label for="discountValue">Descuento</label>
                                 <div class="field-text">
-                                    <input type="text" name="discountValue" id="discountValue" value="">
+                                    <input type="text" name="discountValue" id="discountValue" value="<%= product.discountValue %>">
                                 </div>
                               
                             </div>
@@ -50,7 +50,7 @@
                             <div class="field-div">
                                 <label for="discount">Tiene descuento</label>
                                 <div class="field-text">
-                                    <input type="discount" name="discount" id="discount">
+                                    <input type="discount" name="discount" id="discount" value="<%= product.discount %>">
                                 </div>
                               
                             </div>
@@ -67,7 +67,7 @@
                             <div class="field-div">
                                 <label for="description">Descripción</label>
                                 <div class="field-text">
-                                    <input type="description" name="description" id="description">
+                                    <input type="description" name="description" id="description" value="<%= product.description %>">
                                 </div>
                               
                             </div>
@@ -85,8 +85,15 @@
                                 <div class="field-text">
                                     <button type="submit">Editar producto</button>
                                 </div>
-                            </div> 
-                        </form>  
+                            </div>
+                        </form>
+                        <div class="field-div">
+                            <div class="field-text">
+                                <form class="field-div" action="/products/<%= product.id %>?_method=delete" method="POST">
+                                <button>Borrar producto</button>
+                                </form> 
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
