@@ -1,87 +1,114 @@
 [
-    {
-        "id": 1,
-        "firstname": "Adela",
-        "lastname": "Cawthera",
-        "username": "acawthera0",
-        "birthday": "3/8/2020",
-        "email": "acawthera0@japanpost.jp",
-        "password": "KkwXoX0zR5B",
-        "myselection": [
-            {"dulce_de_leche": "selected"},
-            {"chocolate": "unselected"},
-            {"frutal": "selected"},
-            {"crema_pastelera": "unselected"},
-            {"sorprenderme": "selected"}
-        ],
-        "avatar": "https://robohash.org/magnamidaspernatur.png?size=50x50&set=set1"
-    },
-    {
-        "id": 2,
-        "firstname": "Federico",
-        "lastname": "Domney",
-        "username": "fdomney1",
-        "birthday": "3/28/2020",
-        "email": "fdomney1@photobucket.com",
-        "password": "Swh3WLGd2n",
-        "myselection": [
-            {"dulce_de_leche": "unselected"},
-            {"chocolate": "unselected"},
-            {"frutal": "unselected"},
-            {"crema_pastelera": "unselected"},
-            {"sorprenderme": "unselected"}
-        ],
-        "avatar": "https://robohash.org/idutconsectetur.bmp?size=50x50&set=set1"
-    },
-    {
-        "id": 3,
-        "firstname": "Claudette",
-        "lastname": "Kippling",
-        "username": "ckippling2",
-        "birthday": "8/30/2019",
-        "email": "ckippling2@wikimedia.org",
-        "password": "8aCnLYu",
-        "myselection": [
-            {"dulce_de_leche": "selected"},
-            {"chocolate": "selected"},
-            {"frutal": "selected"},
-            {"crema_pastelera": "selected"},
-            {"sorprenderme": "selected"}
-        ],
-        "avatar": "https://robohash.org/magninemobeatae.bmp?size=50x50&set=set1"
-    },
-    {
-        "id": 4,
-        "firstname": "Brok",
-        "lastname": "Esler",
-        "username": "besler3",
-        "birthday": "6/30/2019",
-        "email": "besler3@edublogs.org",
-        "password": "FDNxsm16c0g6",
-        "myselection": [
-            {"dulce_de_leche": "selected"},
-            {"chocolate": "selected"},
-            {"frutal": "selected"},
-            {"crema_pastelera": "selected"},
-            {"sorprenderme": "selected"}
-        ],
-        "avatar": "https://robohash.org/utinexcepturi.bmp?size=50x50&set=set1"
-    },
-    {
-        "id": 5,
-        "firstname": "Kermie",
-        "lastname": "MacAloren",
-        "username": "kmacaloren4",
-        "birthday": "2/1/2020",
-        "email": "kmacaloren4@google.co.uk",
-        "password": "TFYB27o2NA",
-        "myselection": [
-            {"dulce_de_leche": "selected"},
-            {"chocolate": "selected"},
-            {"frutal": "selected"},
-            {"crema_pastelera": "selected"},
-            {"sorprenderme": "selected"}
-        ],
-        "avatar": "https://robohash.org/magnidelectuscorporis.png?size=50x50&set=set1"
-    }
+ {
+  "id": 1,
+  "firstname": "Adela",
+  "lastname": "Cawthera",
+  "username": "acawthera0",
+  "birthday": "3/8/2020",
+  "email": "acawthera0@japanpost.jp",
+  "password": "KkwXoX0zR5B",
+  "myselection": [
+   "dulce_de_leche",
+   "chocolate",
+   "frutal",
+   "crema_pastelera",
+   "sorprendeme"
+  ],
+  "avatar": "dona.png"
+ },
+ {
+  "id": 2,
+  "firstname": "Federico",
+  "lastname": "Domney",
+  "username": "fdomney1",
+  "birthday": "3/28/2020",
+  "email": "fdomney1@photobucket.com",
+  "password": "Swh3WLGd2n",
+  "myselection": [
+   "dulce_de_leche",
+   "chocolate",
+   "frutal",
+   "crema_pastelera",
+   "sorprendeme"
+  ],
+  "avatar": "dona.png"
+ },
+ {
+  "id": 3,
+  "firstname": "Claudette",
+  "lastname": "Kippling",
+  "username": "ckippling2",
+  "birthday": "8/30/2019",
+  "email": "ckippling2@wikimedia.org",
+  "password": "8aCnLYu",
+  "myselection": [
+   "dulce_de_leche",
+   "chocolate",
+   "frutal",
+   "crema_pastelera",
+   "sorprendeme"
+  ],
+  "avatar": "dona.png"
+ },
+ {
+  "id": 4,
+  "firstname": "Brok",
+  "lastname": "Esler",
+  "username": "besler3",
+  "birthday": "6/30/2019",
+  "email": "besler3@edublogs.org",
+  "password": "FDNxsm16c0g6",
+  "myselection": [
+   "dulce_de_leche",
+   "chocolate",
+   "frutal",
+   "crema_pastelera",
+   "sorprendeme"
+  ],
+  "avatar": "dona.png"
+ },
+ {
+  "id": 5,
+  "firstname": "Kermie",
+  "lastname": "MacAloren",
+  "username": "kmacaloren4",
+  "birthday": "2/1/2020",
+  "email": "kmacaloren4@google.co.uk",
+  "password": "TFYB27o2NA",
+  "myselection": [
+   "dulce_de_leche",
+   "chocolate",
+   "frutal",
+   "crema_pastelera",
+   "sorprendeme"
+  ],
+  "avatar": "dona.png"
+ },
+ {
+  "firstname": "ale",
+  "lastname": "lorenz",
+  "username": "alorenz",
+  "birthday": "10/10/9123",
+  "email": "e23",
+  "myselection": [
+   "dulce_de_leche",
+   "chocolate"
+  ],
+  "password": "1234567890",
+  "confirm-password": "1234567890",
+  "avatar": "user-1615416542808.jpg",
+  "id": 6
+ },
+ {
+  "firstname": "Pikachu",
+  "lastname": "Pika",
+  "username": "pikachu",
+  "birthday": "01/12/2003",
+  "email": "sdw",
+  "myselection": "frutal",
+  "password": "1234567890",
+  "confirm-password": "1234567890",
+  "avatar": "user-1615417814724.png",
+  "id": 7
+ }
 ]

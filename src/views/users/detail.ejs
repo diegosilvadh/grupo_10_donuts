@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('./../partials/head') %>
+        <title>Donas</title>
+    </head>
+    <body>
+
+    <!--incluimos partials del header-->
+    <%- include('./../partials/header') %>
+
+        <main>
+            <div class="container">
+                <section>
+                    <h2 class="title-h2">Usuario</h2>
+                    <div >
+        <!-- Menu en Base de datos --> 
+                        <article class="card"> 
+                            <p><strong>Nombre Completo: <%= user.firstname %>  <%= user.lastname %></strong></p>
+                            <div class="card-left">
+                                <figure>
+                                    <img class="product_img" src= /img/users/<%= user.avatar %> alt= <%= user.firstname%> >
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p>ID: <%= user.id %></p>
+                                <p>Username:<%= user.username %></p>
+                                <p>birthday: <%= user.birthday %></p>
+                                <p>email:<%= user.email %></p>
+                                <p>password:<%= user.password %></p>
+                            </div>
+
+                        </article>
+                            
+       <!-- Fin Menu en Base de datos -->
+                    </div>
+                </section>
+            </div>
+        </main>
+
+    <!--incluimos partials del footer-->
+    <%- include('./../partials/footer') %>
+    </body>
+</html>

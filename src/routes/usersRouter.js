@@ -22,8 +22,18 @@ const upload = multer({ storage });
 
 // Rutas de Controller
 
-router.get('/login', usersController.login);
+router.get('/', usersController.index);
 router.get('/register', usersController.register);
+router.post('/', upload.single('avatar'), usersController.store);
+router.get('/:id', usersController.show);
+router.get('/login', usersController.login);
+
+//router.get('/create', productsController.create);
+
+
+//router.get('/:id/edit', productsController.edit);
+//router.put('/:id', upload.single('images'), productsController.update);
+//router.delete('/:id', productsController.destroy);
 
 // Exporta modulo
 

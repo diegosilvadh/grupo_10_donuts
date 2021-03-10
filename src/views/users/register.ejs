@@ -15,14 +15,14 @@
         <main class="register">
             <section class="section-register">
                 <h3>Creá tu usuario</h3>
-                <form action="/" method="POST">
+                <form action="/users" method="POST" enctype="multipart/form-data">
                     <div class="field-div">
                         <label class="label-field register-h2" for="firstname">Nombre:</label>
-                        <input class="field-text" type="text" name="firstname" id="fullname" placeholder="Nombre">
+                        <input class="field-text" type="text" name="firstname" id="firstname" placeholder="Nombre">
                     </div>
                     <div class="field-div">
                         <label class="label-field register-h2" for="lastname">Apellido:</label>
-                        <input class="field-text" type="text" name="lastname" id="fullname" placeholder="Apellido">
+                        <input class="field-text" type="text" name="lastname" id="lastname" placeholder="Apellido">
                     </div>
                     <div class="field-div">
                         <label class="label-field  register-h2" for="username">Nombre de Usuario:</label>
@@ -30,11 +30,11 @@
                     </div>
                     <div>
                         <label class="label-field  register-h2" for="birthday">Fecha de Nacimiento:</label>
-                        <input class="field-date  register-h2" type="birthday" name="date" id="date" placeholder="Fecha de Nacimiento">
+                        <input class="field-date  register-h2" type="birthday" name="birthday" id="birthday" placeholder="Fecha de Nacimiento">
                     </div>
                     <div class="field-div">
                         <label class="label-field register-h2" for="email">Dirección:</label>
-                        <input class="field-text" type="text" name="email" id="Address" placeholder="Escribe tu dirección">
+                        <input class="field-text" type="text" name="email" id="email" placeholder="Escribe tu dirección">
                     </div>
                     <div class="field-div">
                         <label class="label-field register-h2">Intereses</label>
@@ -46,7 +46,7 @@
                         <label class="label-field register-h2"><input type="checkbox" name="myselection" value="chocolate"> De Chocolate</label>
                     </div>
                     <div class="field-div">
-                        <label class="label-field register-h2"><input type="checkbox" name="myselection" value="frutalr"> Frutal</label>
+                        <label class="label-field register-h2"><input type="checkbox" name="myselection" value="frutal"> Frutal</label>
                     </div>
                     <div class="field-div">
                         <label class="label-field register-h2"><input type="checkbox" name="myselection" value="crema_pastelera"> De Crema Pastelera</label>
@@ -67,26 +67,25 @@
                         <label class="label-field register-h2" for="confirm-password">Confirmar Contraseña:</label>
                         <input class="field-text" type="password" name="confirm-password" id="confirm-password" minlength="8" pattern=".{8,}">
                     </div>
-                    <!-- Responsive
                     <div class="field-div">
-                        <button class="button-register" type="Send">Creá tu Cuenta</button>
-                        <button class="button-register" type="Reset">Rellena de Nuevo</button>
+                        <button class="button-register" type="submit" value="Submit">Creá tu Cuenta</button>
+                        <button class="button-register" type="reset" value="Reset">Rellena de Nuevo</button>
                     </div>
                 
                     </div>
-                    -->
-                </form>
-            <!-- Responsive-->    
+                </form>   
              </section>  
              <section>   
                 <div class="login-account">
                     <h3>¿Ya tenes usuario?</h3>
                     <a href="/login">Endulza tu día <i class="fas fa-stroopwafel"></i></a></li>
                 </div>
+                <!--
                 <div class="field-div">
-                    <button class="button-register" type="Send">Creá tu Cuenta</button>
-                    <button class="button-register" type="Reset">Rellena de Nuevo</button>
+                    <button class="button-register" type="submit">Creá tu Cuenta</button>
+                    <button class="button-register" type="reset">Rellena de Nuevo</button>
                 </div>
+                -->
             </section>  <!--Responsive Register-->
         
         </main>
