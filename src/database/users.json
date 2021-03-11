@@ -110,5 +110,51 @@
   "confirm-password": "1234567890",
   "avatar": "user-1615417814724.png",
   "id": 7
+ },
+ {
+  "firstname": "Diego",
+  "lastname": "Silva",
+  "username": "disilva",
+  "birthday": "10/10/1974",
+  "email": "ddd",
+  "myselection": [
+   "dulce_de_leche",
+   "chocolate",
+   "crema_pastelera"
+  ],
+  "password": "$2a$10$eC8vOrmgmMKPMYDOB3Sc4uI0mPTJagG19cjJGDIW1LSZntRsPHI0y",
+  "confirm-password": "1234567890",
+  "avatar": "user-1615419021151.jpeg",
+  "id": 8
+ },
+ {
+  "firstname": "Diego",
+  "lastname": "Silva",
+  "username": "disilva",
+  "birthday": "1974-10-10",
+  "email": "diego@diego.com",
+  "myselection": "sorprendeme",
+  "password": "$2a$10$474Rvx7pVhBh2tE5ipipgOy859.rC/YkTK5Vw96..hpnHu17I/3QW",
+  "confirm-password": "1234567890",
+  "avatar": "user-1615420403906.png",
+  "id": 9
+ },
+ {
+  "firstname": "Diego",
+  "lastname": "Silva",
+  "username": "disilva",
+  "birthday": "1974-10-10",
+  "email": "diego@diego.com",
+  "myselection": [
+   "dulce_de_leche",
+   "chocolate",
+   "frutal",
+   "crema_pastelera",
+   "sorprendeme"
+  ],
+  "password": "$2a$10$BZ/TP9E1z4lmZ9AwNXjLHOeybCWuuPdl4THMv3JjWmb.QXLbFigwe",
+  "confirm-password": "1234567890",
+  "avatar": "user-1615421780617.png",
+  "id": 10
  }
 ]

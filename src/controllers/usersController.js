@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const jsonTable = require('../database/jsonTable');
 const usersTable = jsonTable('users');
+const bcrypt = require('bcryptjs');
 
 const controller = {
     index: (req, res) => {
@@ -20,6 +21,7 @@ const controller = {
     store: (req, res) => {
         // Generamos el nuevo Usuario
         let user = req.body;
+        user.password = bcrypt.hashSync(user.password);
 
         if (req.file) {
             user.avatar = req.file.filename;
@@ -46,22 +48,6 @@ const controller = {
     login: (req,res) => {
         res.render('users/login');
     },
-    
-
-// Controller Products
-
-    productDetail:  (req, res) => {
-        res.render('products/productDetail');
-},
-    productCart:  (req, res) => {
-        res.render('products/productCart');
-},
-    promotions:  (req, res) => {
-        res.render('products/promotion');
-},
-abmProducts:  (req, res) => {
-    res.render('products/abmproducts');
-},
 };
 
 module.exports = controller
