@@ -24,11 +24,13 @@ app.listen(process.env.PORT || 3000, ()=>{
 
 const mainRouter = require('./routes/mainRouter');
 const productsRouter = require('./routes/productsRouter');
+const apiProductsRouter = require('./routes/api/productsRouter');
 const usersRouter = require('./routes/usersRouter');
 
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+app.use('/api/products', apiProductsRouter);
 app.use((req,res,next) => {
     res.status(404).render("not-found");
 });

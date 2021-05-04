@@ -1,160 +1,119 @@
 [
  {
   "id": 1,
+  "id_rol": 1,
   "firstname": "Adela",
   "lastname": "Cawthera",
   "username": "acawthera0",
-  "birthday": "3/8/2020",
+  "birthday": "2020-08-03",
   "email": "acawthera0@japanpost.jp",
   "password": "KkwXoX0zR5B",
-  "myselection": [
-   "dulce_de_leche",
-   "chocolate",
-   "frutal",
-   "crema_pastelera",
-   "sorprendeme"
-  ],
+  "myselection": "ddl,choco,frutal,crema_pastelera,sorprendeme",
   "avatar": "dona.png"
  },
  {
   "id": 2,
+  "id_rol": 1,
   "firstname": "Federico",
   "lastname": "Domney",
   "username": "fdomney1",
-  "birthday": "3/28/2020",
+  "birthday": "2020-03-28",
   "email": "fdomney1@photobucket.com",
   "password": "Swh3WLGd2n",
-  "myselection": [
-   "dulce_de_leche",
-   "chocolate",
-   "frutal",
-   "crema_pastelera",
-   "sorprendeme"
-  ],
+  "myselection": "ddl,choco,frutal,crema_pastelera,sorprendeme",
   "avatar": "dona.png"
  },
  {
   "id": 3,
+  "id_rol": 1,
   "firstname": "Claudette",
   "lastname": "Kippling",
   "username": "ckippling2",
-  "birthday": "8/30/2019",
+  "birthday": "2019-08-18",
   "email": "ckippling2@wikimedia.org",
   "password": "8aCnLYu",
-  "myselection": [
-   "dulce_de_leche",
-   "chocolate",
-   "frutal",
-   "crema_pastelera",
-   "sorprendeme"
-  ],
+  "myselection": "ddl,choco,frutal,crema_pastelera,sorprendeme",
   "avatar": "dona.png"
  },
  {
   "id": 4,
+  "id_rol": 1,
   "firstname": "Brok",
   "lastname": "Esler",
   "username": "besler3",
-  "birthday": "6/30/2019",
+  "birthday": "2019-06-30",
   "email": "besler3@edublogs.org",
   "password": "FDNxsm16c0g6",
-  "myselection": [
-   "dulce_de_leche",
-   "chocolate",
-   "frutal",
-   "crema_pastelera",
-   "sorprendeme"
-  ],
+  "myselection": "ddl,choco,frutal,crema_pastelera,sorprendeme",
   "avatar": "dona.png"
  },
  {
   "id": 5,
+  "id_rol": 1,
   "firstname": "Kermie",
   "lastname": "MacAloren",
   "username": "kmacaloren4",
-  "birthday": "2/1/2020",
+  "birthday": "2020-02-01",
   "email": "kmacaloren4@google.co.uk",
   "password": "TFYB27o2NA",
-  "myselection": [
-   "dulce_de_leche",
-   "chocolate",
-   "frutal",
-   "crema_pastelera",
-   "sorprendeme"
-  ],
+  "myselection": "ddl,choco,frutal,crema_pastelera,sorprendeme",
   "avatar": "dona.png"
  },
  {
   "firstname": "ale",
   "lastname": "lorenz",
   "username": "alorenz",
-  "birthday": "10/10/9123",
+  "birthday": "1973-10-10",
   "email": "e23",
-  "myselection": [
-   "dulce_de_leche",
-   "chocolate"
-  ],
+  "myselection": "ddl,frutal,sorprendeme",
   "password": "1234567890",
-  "confirm-password": "1234567890",
   "avatar": "user-1615416542808.jpg",
+  "id_rol": 2,
   "id": 6
  },
  {
   "firstname": "Pikachu",
+  "id_rol": 1,
   "lastname": "Pika",
   "username": "pikachu",
-  "birthday": "01/12/2003",
+  "birthday": "2003-12-01",
   "email": "sdw",
   "myselection": "frutal",
   "password": "1234567890",
-  "confirm-password": "1234567890",
   "avatar": "user-1615417814724.png",
   "id": 7
  },
  {
   "firstname": "Diego",
+  "id_rol": 2,
   "lastname": "Silva",
   "username": "disilva",
-  "birthday": "10/10/1974",
+  "birthday": "1975-12-29",
   "email": "ddd",
-  "myselection": [
-   "dulce_de_leche",
-   "chocolate",
-   "crema_pastelera"
-  ],
+  "myselection": "ddl,choco,frutal,crema_pastelera,sorprendeme",
   "password": "$2a$10$eC8vOrmgmMKPMYDOB3Sc4uI0mPTJagG19cjJGDIW1LSZntRsPHI0y",
-  "confirm-password": "1234567890",
   "avatar": "user-1615419021151.jpeg",
   "id": 8
  },
  {
-  "firstname": "Diego",
+  "id": 9,
+  "firstname": "Diegoooooooo",
   "lastname": "Silva",
   "username": "disilva",
-  "birthday": "1974-10-10",
+  "birthday": "",
   "email": "diego@diego.com",
-  "myselection": "sorprendeme",
   "password": "$2a$10$474Rvx7pVhBh2tE5ipipgOy859.rC/YkTK5Vw96..hpnHu17I/3QW",
-  "confirm-password": "1234567890",
-  "avatar": "user-1615420403906.png",
-  "id": 9
+  "avatar": "user-1615420403906.png"
  },
  {
+  "id": 10,
   "firstname": "Diego",
   "lastname": "Silva",
-  "username": "disilva",
+  "username": "diegote",
+  "id_rol": 1,
   "birthday": "1974-10-10",
-  "email": "diego@diego.com",
-  "myselection": [
-   "dulce_de_leche",
-   "chocolate",
-   "frutal",
-   "crema_pastelera",
-   "sorprendeme"
-  ],
-  "password": "$2a$10$BZ/TP9E1z4lmZ9AwNXjLHOeybCWuuPdl4THMv3JjWmb.QXLbFigwe",
-  "confirm-password": "1234567890",
-  "avatar": "user-1615421780617.png",
-  "id": 10
+  "email": "diegote@gmail.com",
+  "password": "$2a$10$j1iMIweUvj/yUXjzq1ian.z.1zEvTBJPmd8ZLFBAEu2DsQN3pVX8S",
+  "avatar": "user-1615850098324.png"
  }
 ]

@@ -2,7 +2,7 @@
  {
   "id": 1,
   "name": "Dona Turquesa",
-  "price": "$100",
+  "price": "100",
   "discountValue": "40% Off",
   "discount": 1,
   "images": "dona-turquesa.jpg",
@@ -12,7 +12,7 @@
  {
   "id": 2,
   "name": "Dona Fuxia",
-  "price": "$100",
+  "price": "100",
   "discountValue": "0% Off",
   "discount": 0,
   "images": "dona-fuxia.jpg",
@@ -22,7 +22,7 @@
  {
   "id": 3,
   "name": "Dona Blanca",
-  "price": "$100",
+  "price": "100",
   "discountValue": "0% Off",
   "discount": 0,
   "images": "dona-blanca.jpg",
@@ -32,7 +32,7 @@
  {
   "id": 4,
   "name": "Dona Chocolate",
-  "price": "$100",
+  "price": "100",
   "discountValue": "0% Off",
   "discount": 0,
   "images": "dona-choco.jpg",
@@ -42,7 +42,7 @@
  {
   "id": 5,
   "name": "Dona Verde",
-  "price": "$150",
+  "price": "150",
   "discountValue": "30% Off",
   "discount": 1,
   "images": "dona-verde.jpg",
@@ -52,7 +52,7 @@
  {
   "id": 6,
   "name": "Dona Krispi",
-  "price": "$160",
+  "price": "160",
   "discountValue": "10% Off",
   "discount": "0",
   "description": "Dona Dona Krispi",
@@ -62,7 +62,7 @@
  {
   "id": 7,
   "name": "Dona Coco",
-  "price": "$80",
+  "price": "80",
   "discountValue": "50% Off",
   "discount": 1,
   "images": "dona-glaseada-blanca.jpg",
@@ -72,7 +72,7 @@
  {
   "id": 8,
   "name": "Dona Choco Krispi",
-  "price": "$110",
+  "price": "110",
   "discountValue": "0% Off",
   "discount": 0,
   "images": "/dona-choco-krispi.jpg",

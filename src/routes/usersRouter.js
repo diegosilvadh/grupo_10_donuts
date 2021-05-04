@@ -24,16 +24,12 @@ const upload = multer({ storage });
 
 router.get('/', usersController.index);
 router.get('/register', usersController.register);
+router.get('/login', usersController.login);
 router.post('/', upload.single('avatar'), usersController.store);
 router.get('/:id', usersController.show);
-router.get('/login', usersController.login);
-
-//router.get('/create', productsController.create);
-
-
-//router.get('/:id/edit', productsController.edit);
-//router.put('/:id', upload.single('images'), productsController.update);
-//router.delete('/:id', productsController.destroy);
+router.get('/:id/edit', usersController.edit);
+router.put('/:id', upload.single('avatar'), usersController.update);
+router.delete('/:id', usersController.destroy);
 
 // Exporta modulo
 

@@ -24,11 +24,14 @@
                                 </figure>
                             </div>
                             <div class="card-content">
-                                <p>ID: <%= user.id %></p>
+                                <p>ID: <%= user.id_user %></p>
+                                <p>Nombre: <%= user.first_name %></p>
+                                <p>Apellido: <%= user.last_name %></p>
                                 <p>Username:<%= user.username %></p>
                                 <p>birthday: <%= user.birthday %></p>
                                 <p>email:<%= user.email %></p>
                                 <p><strong>Intereses:</strong></p>
+                                <p><%= user.myselection %></p>
                                 <!-- <p>password:<%= user.password %></p> -->
                             </div>
 

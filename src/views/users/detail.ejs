@@ -23,11 +23,13 @@
                                 </figure>
                             </div>
                             <div class="card-content">
-                                <p>ID: <%= user.id %></p>
+                                <p>ID: <%= user.id_user %></p>
+                                <p>Nombre: <%= user.first_name %></p>
+                                <p>Apellido: <%= user.last_name %></p>
                                 <p>Username:<%= user.username %></p>
                                 <p>Fecha de Nacimiento: <%= user.birthday %></p>
                                 <p>Email:<%= user.email %></p>
-                                <p>Password:<%= user.password %></p>
+                                <p><%= user.myselection %></p>
                             </div>
 
                         </article>

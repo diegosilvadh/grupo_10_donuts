@@ -4,15 +4,20 @@ const fs = require('fs');
 const path = require('path');
 const jsonTable = require('../database/jsonTable');
 const productsTable = jsonTable('products');
+const db = require("../database/models");
 
 const controller = {
     index: (req, res) => {
-        let products = productsTable.all()
-        console.log(products);
-        res.render('products/index', { 
-            title: 'Listado de Productos', 
-            products      
-        });
+        //let products = productsTable.all()
+        db.Product.findAll()
+            .then(function(products){
+                res.render('products/index', { 
+                    title: 'Listado de Productos', 
+                    products      
+                });
+                console.log(products)
+            })
+        
     },
     create: (req, res) => {
         res.render('products/create');

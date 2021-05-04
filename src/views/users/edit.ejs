@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('./../partials/head') %>
+        <title>Donas</title>
+    </head>
+    <body>
+
+    <!--incluimos partials del header-->
+    <%- include('./../partials/header') %>
+
+        <main>
+            <div class="container">
+                <section>
+                    <h2 class="title-h2">Edita tu usuario</h2>
+                    <div >
+        <!-- Menu en Base de datos --> 
+                        <form action="/users/<%= user.id_user %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
+                            <div class="field-div">
+                                <label for="id">Id</label>
+                                <div class="field-text">
+                                    <input type="text" name="id" id="id" value="<%= user.id_user %>" readonly>
+                                </div> 
+                            </div>
+                            <div class="field-div">
+                                <label for="firstname">Nombre</label>
+                                <div class="field-text">
+                                    <input type="text" name="firstname" id="firstname" value="<%= user.first_name %>">
+                                </div>
+                            </div>
+                            <div class="field-div">
+                                <label for="lastname">Apellido</label>
+                                <div class="field-text">
+                                    <input type="text" name="lastname" id="lastname" value="<%= user.last_name %>">
+                                </div>
+                            </div>
+                            <div class="field-div">
+                                <label for="username">Username</label>
+                                <div class="field-text">
+                                    <input type="text" name="username" id="username" value="<%= user.username %>">
+                                </div>
+                            </div>
+                            <div class="field-div">
+                                    <label for="birthday">Fecha de Nacimiento</label>
+                                    <div class="field-text">
+                                        <input type="date" name="birthday" id="birthday" value="<%= user.birthday %>">
+                                    </div>
+                            </div>
+                            <div class="field-div">
+                                    <label for="email">Dirección Electrónica</label>
+                                    <div class="field-text">
+                                        <input type="email" name="email" id="email" value="<%= user.email %>">
+                                    </div>
+                            </div>
+                            <div class="field-div">
+                                    <label for="surname">Password</label>
+                                    <div class="field-text">
+                                        <input type="password" name="password" id="password" value="<%= user.password %>">
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="field-div">
+                            <label for="images">Imagen de usuario</label>
+                            <div class="field-text">
+                                <input type="file" name="avatar" id="avatar">
+                            </div>
+                          
+                        </div>
+                            <div class="field-div">
+                                <div class="field-text">
+                                    <button type="submit">Editar usuario</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="field-div">
+                            <div class="field-text">
+                                <form class="field-div" action="/users/<%= user.id_user %>?_method=delete" method="POST">
+                                <button>Borrar usuario</button>
+                                </form> 
+                            </div>
+                        </div>
+                            
+       <!-- Fin Menu en Base de datos -->
+                    </div>
+                </section>
+            </div>
+        </main>
+
+    <!--incluimos partials del footer-->
+    <%- include('./../partials/footer') %>
+    </body>
+</html>
