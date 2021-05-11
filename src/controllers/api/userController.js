@@ -5,13 +5,13 @@ const db = require('../../database/models');
 const controller = {
     index: (req, res) => {
         //let products = productsTable.all()
-        db.Product.findAll()
-            .then(function(products){
+        db.User.findAll()
+            .then(function(users){
                 const response = {
                     meta: {
-                        count: products.length,
+                        count: users.length,
                     },
-                    results: products
+                    results: users
                 }
                 res.status(302).json (response);
             })
@@ -19,10 +19,10 @@ const controller = {
     },
 
     show: (req,res) => {
-        db.Product.findByPk(req.params.id)
-        .then(function(products){
+        db.User.findByPk(req.params.id)
+        .then(function(users){
             const response = {
-                results: products
+                results: users
             }
             res.status(302).json (response);
         })
