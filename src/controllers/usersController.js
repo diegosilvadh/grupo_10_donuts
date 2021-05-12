@@ -24,19 +24,35 @@ const controller = {
         let { first_name, last_name, username, birthday, email, password, myselection } = req.body;
         password = bcrypt.hashSync(password);
         id_rol = 1;
-        User.create({
-            first_name,
-            last_name,
-            username,
-            birthday,
-            email,
-            avatar: file ? file.filename: user.avatar,
-            password,
-            myselection,
-            id_rol
+
+        User.findOne({
+            where: { email: email }
         })
           .then (user => {
-            res.render('users/detail', { user });
+            
+            if (user) {
+                console.log('El mail existe')
+                res.render('users/register', { oldData: req.body});
+            } else {
+                User.create({
+                    first_name,
+                    last_name,
+                    username,
+                    birthday,
+                    email,
+                    avatar: file ? file.filename: avatar,
+                    password,
+                    myselection,
+                    id_rol
+                })
+                .then (user => {
+                    res.render('users/login', { user });
+                })
+            }
+          })
+          .catch(err => {
+            console.log('ERROR', err)
+            return reject(err)
           })
 
     },

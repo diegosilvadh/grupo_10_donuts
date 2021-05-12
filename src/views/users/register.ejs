@@ -18,23 +18,29 @@
                 <form action="/users" method="POST" enctype="multipart/form-data">
                     <div class="field-div">
                         <label class="label-field register-h2" for="first_name">Nombre:</label>
-                        <input class="field-text" type="text" name="first_name" id="first_name" placeholder="Nombre">
+                        <input class="field-text" type="text" name="first_name" id="first_name" placeholder="Nombre"
+                        value="<%= locals.oldData ? oldData.first_name : null %>">
                     </div>
                     <div class="field-div">
                         <label class="label-field register-h2" for="last_name">Apellido:</label>
-                        <input class="field-text" type="text" name="last_name" id="last_name" placeholder="Apellido">
+                        <input class="field-text" type="text" name="last_name" id="last_name" placeholder="Apellido"
+                        value="<%= locals.oldData ? oldData.last_name : null %>">
                     </div>
                     <div class="field-div">
                         <label class="label-field  register-h2" for="username">Nombre de Usuario:</label>
-                        <input class="field-text" type="text" name="username" id="username" placeholder="Username">
+                        <input class="field-text" type="text" name="username" id="username" placeholder="Username"
+                        value="<%= locals.oldData ? oldData.username : null %>">
                     </div>
                     <div>
                         <label class="label-field  register-h2" for="birthday">Fecha de Nacimiento:</label>
-                        <input class="field-date  register-h2" type="date" name="birthday" id="birthday" placeholder="Fecha de Nacimiento">
+                        <input class="field-date  register-h2" type="date" name="birthday" id="birthday"
+                         placeholder="Fecha de Nacimiento"
+                         value="<%= locals.oldData ? oldData.birthday : null %>">
                     </div>
                     <div class="field-div">
                         <label class="label-field register-h2" for="email">Email:</label>
-                        <input class="field-text" type="email" name="email" id="email" placeholder="Escribe tu dirección">
+                        <input class="field-text" type="email" name="email" id="email" placeholder="Escribe tu dirección"
+                        value="<%= locals.oldData ? oldData.email : null %>">
                     </div>
                     <div class="field-div">
                         <label class="label-field register-h2">Intereses</label>
