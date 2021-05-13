@@ -15,22 +15,22 @@
         <div class="contendor">
             <section class="section-login">
                 <h3>¡Hola! Ingresá tu usuario, ¿Con qué vas a endulzar tu día?</h3>
-                <form action="/" method="POST">
+                <form method="POST" action="/users/login">
                     <div class="field-div">
-                        <label class="label-field login-h2" for="username">Nombre de Usuario:</label>
-                        <input  class="field-text" type="text" name="username" id="username"  minlength="3" placeholder="Escribe tu Usuario">
+                        <label class="label-field login-h2" for="email">Dirección de Correo:</label>
+                        <input  class="field-text" type="text" name="email" id="email"  minlength="3" placeholder="Escribe tu Mail">
                     </div>
                     <div class="field-div">
                         <label class="label-field login-h2" for="password">Contraseña:</label>
-                        <input class="field-text" type="password" name="password" id="password" placeholder="Escribí tu contraseña" class="field-text" minlength="8" pattern=".{8,}">
+                        <input class="field-text" type="password" name="password" id="password" placeholder="Escribí tu contraseña" class="field-text">
                     </div>
                     <div class="field-div">
-                        <button class="field-button-login" type="Send">Ingresar</button>
+                        <button class="field-button-login" type="submit">Ingresar</button>
                     </div>
                 </form>
                 <section class="create-account">
                     <h3>¿Eres un nuevo Usuario?</h3>
-                    <a href="/register">Creá tu cuenta <i class="fas fa-user-circle"></i></a></li>
+                   <a href="/register">Creá tu cuenta <i class="fas fa-user-circle"></i></a></li>
                 </section>
             </section>
         </div>

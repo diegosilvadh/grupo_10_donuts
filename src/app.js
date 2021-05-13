@@ -4,7 +4,6 @@ const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
 // Template engine
-
 app.use(express.static('./public'));
 app.set('view engine', 'ejs')
 app.set('views', './src/views')
@@ -27,7 +26,19 @@ const productsRouter = require('./routes/productsRouter');
 const apiProductsRouter = require('./routes/api/productsRouter');
 const apiUsersRouter = require('./routes/api/usersRouter');
 const usersRouter = require('./routes/usersRouter');
+const session = require('express-session');
+const cookies = require('cookie-parser');
 
+// Uso de Session & Cookies
+
+app.use(session({
+	secret: "Grupo10 Donas",
+	resave: false,
+	saveUninitialized: false,
+}));
+
+app.use(cookies());
+//app.use(express.static('./public'));
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);

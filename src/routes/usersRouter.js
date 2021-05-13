@@ -13,8 +13,6 @@ const storage = multer.diskStorage({
         callback(null, path.join(__dirname, '../../public/img/users/'));
     },
     filename: (req, file, callback) => {
-        // Mejor usar algo como esto en lugar de Date.now()
-        // https://www.npmjs.com/package/uuidv4
         callback(null, 'user-' + Date.now() + path.extname(file.originalname));
     }
 });
@@ -25,6 +23,9 @@ const upload = multer({ storage });
 router.get('/', usersController.index);
 router.get('/register', usersController.register);
 router.get('/login', usersController.login);
+router.post('/login', usersController.loginProcess);
+// Perfil de Usuario
+router.get('/profile/', usersController.profile)
 router.post('/', upload.single('avatar'), usersController.store);
 router.get('/:id', usersController.show);
 router.get('/:id/edit', usersController.edit);
