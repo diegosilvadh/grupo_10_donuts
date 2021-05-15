@@ -637,6 +637,14 @@ p em strong{
     background-position: center;
 }
 
+.under-construction {
+    background-image: url("../img/underconstruction.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
 /* BRAEAD */
 /* Cards */
 
