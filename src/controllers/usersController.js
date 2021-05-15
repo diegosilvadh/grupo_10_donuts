@@ -95,7 +95,10 @@ const controller = {
             .then  (() => {
                 res.render('users/detail', { user });
             })
-            .catch(err => console.log(err))
+            .catch(err => {
+                console.log('ERROR', err)
+                return reject(err)
+              })
             })
     },
     destroy: (req, res) => {
@@ -122,17 +125,44 @@ const controller = {
             where: {
                 email: email},
             })
-            .then ((user) => {
-                    let isOkThePassword = bcrypt.compareSync(password, user.password);
-                    if (isOkThePassword) {
-                        delete user.password;
+            .then(user => {
+                
+                if(user) {
+                    if (bcrypt.compareSync(password, user.password)) { 
                         req.session.userLogged = user;
-                        res.cookie('userEmail',user.email)
-                        return res.redirect('/users/profile');
+                        res.cookie('userEmail', user.email, { maxAge: (1000 * 60) * 60 });
+                        return res.redirect('/users/profile'); 
                     }
-                } 
-            );
-		/* return res.render('users/login', {
+                }
+               
+                return res.render('users/login', {
+                    errors: {
+                        email: {
+                            msg: 'Las credenciales son inválidas'
+                        }
+                    }
+                });
+
+            })
+            .catch(err => {
+                console.log('ERROR', err)
+                return reject(err)
+            })
+           
+      
+		/* if(userToLogin) {
+			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+			if (isOkThePassword)  {
+				delete userToLogin.password;
+				req.session.userLogged = userToLogin;
+
+				if(req.body.remember_user) {
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+				}
+
+				return res.redirect('/');
+			} 
+			return res.render('users/login', {
 				errors: {
 					email: {
 						msg: 'Las credenciales son inválidas'
@@ -149,6 +179,11 @@ const controller = {
 			}
 		}); */
 	}, 
+    logout: (req, res) => {
+		res.clearCookie('userEmail');
+		req.session.destroy();
+		return res.redirect('/');
+	}
 };
 
 module.exports = controller

@@ -21,17 +21,31 @@
     </a>
     
     <nav class="main-navbar">
+        <% if (locals.isLogged) { %>
         <ul class="left-navbar">
             <li><a href="#">Donas</a></li>
             <li><a href="/promotions">Promociones </a></li>
             <li><a href="#">Ayuda</a></li>
         </ul>
-
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <!--
+            <a>
+            <img src="/img/users/dona-choco.jpg" width="40" style="border-radius: 100%;">
+            Hola 
+            </a>
+            -->
+            <a class="dropdown-item" href="/users/profile">My profile</a>
+            <li><hr class="dropdown-divider"></li>
+            <a class="dropdown-item" href="/users/logout">Logout</a>
+            
+        </ul>
+        <% } else { %>
         <ul class="right-navbar">
             <li><a href="/users/register">Creá tu cuenta <i class="fas fa-id-card"></i></a></li>
             <li><a href="/users/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
             <li><a href="/products/productCart">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
         </ul>
+        <% } %>
     </nav>
 
 </header>

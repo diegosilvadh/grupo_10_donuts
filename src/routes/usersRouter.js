@@ -18,19 +18,31 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
+
+//Middlewares
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
+
 // Rutas de Controller
 
 router.get('/', usersController.index);
-router.get('/register', usersController.register);
-router.get('/login', usersController.login);
+router.get('/register', guestMiddleware, usersController.register);
+router.get('/login', guestMiddleware, usersController.login);
 router.post('/login', usersController.loginProcess);
 // Perfil de Usuario
-router.get('/profile/', usersController.profile)
+router.get('/profile', authMiddleware, usersController.profile)
 router.post('/', upload.single('avatar'), usersController.store);
+
+
+// Logout
+router.get('/logout', usersController.logout);
+
+
 router.get('/:id', usersController.show);
 router.get('/:id/edit', usersController.edit);
 router.put('/:id', upload.single('avatar'), usersController.update);
 router.delete('/:id', usersController.destroy);
+
 
 // Exporta modulo
 
