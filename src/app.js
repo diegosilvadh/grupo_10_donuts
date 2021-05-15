@@ -29,16 +29,23 @@ const usersRouter = require('./routes/usersRouter');
 const session = require('express-session');
 const cookies = require('cookie-parser');
 
+
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+
 // Uso de Session & Cookies
 
 app.use(session({
 	secret: "Grupo10 Donas",
 	resave: false,
-	saveUninitialized: false,
+	saveUninitialized: true,
 }));
 
 app.use(cookies());
 //app.use(express.static('./public'));
+
+
+app.use(userLoggedMiddleware);
+
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);

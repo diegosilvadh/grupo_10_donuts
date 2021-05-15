@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "Meli.2020",
+    "password": "",
     "database": "donas",
     "host": "localhost",
     "dialect": "mysql",
