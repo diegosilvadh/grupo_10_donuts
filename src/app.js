@@ -3,10 +3,13 @@
 const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
+const auth = require('./middlewares/auth.js');
+
 // Template engine
 app.use(express.static('./public'));
 app.set('view engine', 'ejs')
 app.set('views', './src/views')
+
 
 // Formularios
 app.use(express.urlencoded({ extended: false }));
@@ -38,6 +41,7 @@ app.use(session({
 }));
 
 app.use(cookies());
+app.use(auth);
 //app.use(express.static('./public'));
 app.use('/', mainRouter);
 app.use('/users', usersRouter);

@@ -127,25 +127,12 @@ const controller = {
                     if (isOkThePassword) {
                         delete user.password;
                         req.session.userLogged = user;
+                        res.cookie('userEmail',user.email)
                         return res.redirect('/users/profile');
                     }
                 } 
             );
-        console.log('kk2')
-		
-		/* if(userToLogin) {
-			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-			if (isOkThePassword) {
-				delete userToLogin.password;
-				req.session.userLogged = userToLogin;
-
-				if(req.body.remember_user) {
-					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
-				}
-
-				return res.redirect('/');
-			} 
-			return res.render('users/login', {
+		/* return res.render('users/login', {
 				errors: {
 					email: {
 						msg: 'Las credenciales son inválidas'
