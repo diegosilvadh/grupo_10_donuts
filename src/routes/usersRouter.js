@@ -24,10 +24,11 @@ const upload = multer({ storage });
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 const validateRegisterMiddleware = require('../middlewares/validateRegisterMiddleware');
+const validateLoginMiddleware = require('../middlewares/validateLoginMiddleware');
 // Rutas de Controller
 router.get('/register', guestMiddleware, usersController.register);
 router.get('/login', guestMiddleware, usersController.login);
-router.post('/login', usersController.loginProcess);
+router.post('/login', validateLoginMiddleware, usersController.loginProcess);
 // Perfil de Usuario
 router.get('/profile', authMiddleware, usersController.profile)
 router.post('/', upload.single('avatar'),validateRegisterMiddleware,  usersController.store);
@@ -35,8 +36,6 @@ router.post('/', upload.single('avatar'),validateRegisterMiddleware,  usersContr
 router.get('/', usersController.index);
 // Logout
 router.get('/logout', usersController.logout);
-
-
 router.get('/:id', usersController.show);
 router.get('/:id/edit', usersController.edit);
 router.put('/:id', upload.single('avatar'), usersController.update);

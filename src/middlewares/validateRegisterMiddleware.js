@@ -17,7 +17,7 @@ module.exports = [
         .isEmail().withMessage('Debes escribir un formato de correo válido'),
     body('password')
         .notEmpty().withMessage('Debes ingresar tu contraseña')
-        .isLength({ min: 8, max:200 }).withMessage('El password debe ser de al menos 2 caracteres').bail()
+        .isLength({ min: 8, max:200 }).withMessage('El password debe ser de al menos 8 caracteres').bail()
         .isStrongPassword({minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1}).withMessage('No cumple con los requisitos'),
     body('avatar').custom((value, { req }) => {
             let file = req.file;

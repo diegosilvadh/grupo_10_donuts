@@ -137,6 +137,13 @@ const controller = {
         res.render('users/login');
     },
     loginProcess: (req, res) => {
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            return res.render('users/login', {
+            errors: resultValidation.mapped(),
+            oldData: req.body
+        });
+        }
         const { email, password } = req.body;
 		User.findOne({
             where: {
@@ -154,7 +161,7 @@ const controller = {
                
                 return res.render('users/login', {
                     errors: {
-                        email: {
+                        password: {
                             msg: 'Las credenciales son inválidas'
                         }
                     }
