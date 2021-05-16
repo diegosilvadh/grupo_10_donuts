@@ -1,6 +1,7 @@
 // Modulos y Constantes
 const bcrypt = require('bcryptjs');
 const { User } = require("../database/models")
+const { validationResult } = require('express-validator');
 
 const controller = {
     index: (req, res) => {
@@ -20,6 +21,14 @@ const controller = {
         res.render('users/register');   
     },
     store: (req, res) => {
+        const resultValidation = validationResult(req);
+        console.log(resultValidation);
+        if (resultValidation.errors.length > 0) {
+            return res.render('users/register', {
+            errors: resultValidation.mapped(),
+            oldData: req.body
+        });
+        }
         const { file } = req;
         let { first_name, last_name, username, birthday, email, password, myselection } = req.body;
         password = bcrypt.hashSync(password);
@@ -31,8 +40,16 @@ const controller = {
           .then (user => {
             
             if (user) {
-                console.log('El mail existe')
-                res.render('users/register', { oldData: req.body});
+                    //hacer algo cuando el mail existe
+                    return res.render('users/register', {
+                        oldData: req.body,
+                        errors: {
+                            email: {
+                                msg: 'Ups! El mail ya existe'
+                            }
+                        }
+                    });
+
             } else {
                 User.create({
                     first_name,

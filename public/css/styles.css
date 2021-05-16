@@ -709,7 +709,9 @@ p em strong{
         border-radius: 50%;
     }
 
-
+    .text-danger {
+        color: blue;
+    }
 
 @media (min-width:380px){
     .field-div{
