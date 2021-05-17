@@ -6,6 +6,7 @@ const productsController = require('../controllers/productsController');
 const path = require('path');
 
 const multer = require('multer');
+const validateProductCreateMiddleware = require('../middlewares/validateProductCreateMiddleware');
 const storage = multer.diskStorage({
     destination: (req, file, callback) => {
         callback(null, path.join(__dirname, '../../public/img/'));
@@ -23,7 +24,7 @@ router.get('/', productsController.index);
 router.get('/create', productsController.create);
 router.get('/promotions', productsController.promotions);
 router.get('/:id', productsController.show);
-router.post('/', upload.single('image'), productsController.store);
+router.post('/', upload.single('image'), validateProductCreateMiddleware, productsController.store);
 router.get('/:id/edit', productsController.edit);
 router.put('/:id', upload.single('image'), productsController.update);
 router.delete('/:id', productsController.destroy);

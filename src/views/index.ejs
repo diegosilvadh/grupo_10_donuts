@@ -23,9 +23,10 @@
                             <img class="product_img" src= /img/<%= product.image %> alt= <%= product.name%> >
                             <div class="main-article">
                                 <% if (product.discount == 1){;%>
-                                <i class="<%= product.iconImage%>"></i>
+                                <i class="<%= product.icon_image%>"></i>
                                 <% }else { %>
-                                    <img src= <%= product.iconImage%> class="ico" alt=<%= product.name%>>
+                                    <img src= /img/<%= product.icon_image%> class="ico" alt= <%= product.name%> >
+                                   <!--<i class="<%= product.icon_image%>"></i>-->
                                 <% } %>
                                 <p class="price"><%= product.price %></p>
                                 <p class="discount"><%= product.discount_value %></p>

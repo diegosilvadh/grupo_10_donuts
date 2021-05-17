@@ -17,7 +17,7 @@
                                 <label class="label-field register-h2" for="name">Nombre</label>
                                 <div class="field-text">
                                     <input type="text" name="name" id="name"
-                                    alue="<%= locals.oldData ? oldData.name : null %>">
+                                    value="<%= locals.oldData ? oldData.name : null %>">
                                 </div>
                                 <% if (locals.errors && errors.name) { %>
                                     <div class="text-danger field-text">
@@ -30,25 +30,42 @@
                             <div class="field-div">
                                 <label class="label-field register-h2" for="price">Precio</label>
                                 <div class="field-text">
-                                    <input type="text" name="price" id="price" value="">
+                                    <input type="text" name="price" id="price" 
+                                    value="<%= locals.oldData ? oldData.price : null %>">
                                 </div>
+                                <% if (locals.errors && errors.price) { %>
+                                    <div class="text-danger field-text">
+                                        <%= errors.price.msg  %> 
+                                    </div>
+                                <% } %>
                                 
                             </div>
 
                             <div class="field-div">
                                 <label class="label-field register-h2" for="discount_value">Descuento</label>
                                 <div class="field-text">
-                                    <input type="text" name="discount_value" id="discount_value" value="">
+                                    <input type="text" name="discount_value" id="discount_value" 
+                                    value="<%= locals.oldData ? oldData.discount_value : null %>">
                                 </div>
+                                <% if (locals.errors && errors.discount_value) { %>
+                                    <div class="text-danger field-text">
+                                        <%= errors.discount_value.msg  %> 
+                                    </div>
+                                <% } %>
                               
                             </div>
 
                             <div class="field-div">
                                 <label class="label-field register-h2" for="discount">Tiene descuento</label>
                                 <div class="field-text">
-                                    <input type="discount" name="discount" id="discount">
+                                    <input type="discount" name="discount" id="discount"
+                                    value="<%= locals.oldData ? oldData.discount : null %>">
                                 </div>
-                              
+                                <% if (locals.errors && errors.discount) { %>
+                                    <div class="text-danger field-text">
+                                        <%= errors.discount.msg  %> 
+                                    </div>
+                                <% } %>
                             </div>
 
                             <div class="field-div">
@@ -58,13 +75,23 @@
                                 </div>
                               
                             </div>
-
+                            <% if (locals.errors && errors.image) { %>
+                                <div class="text-danger field-text">
+                                    <%= errors.image.msg  %> 
+                                </div>
+                            <% } %>
                             
                             <div class="field-div">
                                 <label class="label-field register-h2" for="description">Descripción</label>
                                 <div class="field-text">
-                                    <input type="description" name="description" id="description">
+                                    <input type="description" name="description" id="description"
+                                    value="<%= locals.oldData ? oldData.description : null %>">
                                 </div>
+                                <% if (locals.errors && errors.description) { %>
+                                    <div class="text-danger field-text">
+                                        <%= errors.description.msg  %> 
+                                    </div>
+                                <% } %>
                               
                             </div>
 
