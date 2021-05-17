@@ -26,9 +26,6 @@ module.exports = (sequelize, dataTypes) => {
         avatar: {
             type: dataTypes.STRING(50)
         },
-        myselection: {
-            type: dataTypes.STRING(100)
-        },
         id_rol: {
             type: dataTypes.INTEGER(11)
         },

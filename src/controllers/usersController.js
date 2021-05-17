@@ -30,7 +30,7 @@ const controller = {
         });
         }
         const { file } = req;
-        let { first_name, last_name, username, birthday, email, password, myselection } = req.body;
+        let { first_name, last_name, username, birthday, email, password } = req.body;
         password = bcrypt.hashSync(password);
         id_rol = 1;
 
@@ -59,7 +59,6 @@ const controller = {
                     email,
                     avatar: file ? file.filename: avatar,
                     password,
-                    myselection,
                     id_rol
                 })
                 .then (user => {
