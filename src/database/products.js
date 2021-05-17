@@ -79,7 +79,16 @@ let products = [
         description: 'Dona Choco Krispi',
         iconImage: '/img/ico-donut.jpg'
     },
-
+    { 
+        id:15,
+        name: 'Dona Choco Krispi',
+        price: '$110',
+        discountValue: '0% Off',
+        discount: 0,
+        images: '/img/dona-choco-krispi.jpg',
+        description: 'Dona Choco Krispi',
+        iconImage: '/img/ico-donut.jpg'
+    },
 
 ];
 

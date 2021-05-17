@@ -20,13 +20,14 @@
                             <p><strong>Nombre: <%= product.name %></strong></p>
                             <div class="card-left">
                                 <figure>
-                                    <img class="product_img" src= /img/<%= product.images %> alt= <%= product.name%> >
+                                    <img class="product_img" src= /img/<%= product.image %> alt= <%= product.name%> >
                                 </figure>
                             </div>
                             <div class="card-content">
-                                <p>ID: <%= product.id %></p>
-                                <p>Precio:<%= product.price %></p>
-                                <p>Descuento: <%= product.discountValue %></p>
+                                <p>Precio: $<%= product.price %></p>
+                                <% if (product.discount === 1) { %>
+                                    <p>Descuento: <%= product.discount_value %></p>
+                                <% } %>
                                 <p>Descripción:<%= product.description %></p>
                             </div>
                         </article>

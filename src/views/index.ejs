@@ -20,7 +20,7 @@
         <!-- Menu en Base de datos -->
                         <% products.forEach(product => {  %>
                         <article> 
-                            <img class="product_img" src= <%= product.images %> alt= <%= product.name%> >
+                            <img class="product_img" src= /img/<%= product.image %> alt= <%= product.name%> >
                             <div class="main-article">
                                 <% if (product.discount == 1){;%>
                                 <i class="<%= product.iconImage%>"></i>
@@ -28,7 +28,7 @@
                                     <img src= <%= product.iconImage%> class="ico" alt=<%= product.name%>>
                                 <% } %>
                                 <p class="price"><%= product.price %></p>
-                                <p class="discount"><%= product.discountValue %></p>
+                                <p class="discount"><%= product.discount_value %></p>
                                 <a href="/productDetail"><h4 class="description"><%= product.description %></h4></a>
                             </div>
                         </article>

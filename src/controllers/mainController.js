@@ -2,6 +2,7 @@
 
 const path = require('path');
 const products = require('../database/products')
+const { Product } = require("../database/models")
 
 // Modulos y Constantes
 
@@ -11,21 +12,30 @@ const products = require('../database/products')
 //const productsTable = jsonTable('products');
 
 const controller = {
-    index: (req,res) => {
+    /*index: (req,res) => {
         res.render('index',{products});
+    }, */
+    index: (req, res) => {
+        Product.findAll()
+            .then(products => {
+                res.render('index', {  
+                    products      
+                });
+            })
+        
     },
 
 // Controller Users
-    login: (req,res) => {
+/*    login: (req,res) => {
         res.render('users/login');
     },
     register:  (req, res) => {
         res.render('users/register');
-},
+}, */
 
 // Controller Products
 
-    productDetail:  (req, res) => {
+ /*   productDetail:  (req, res) => {
         res.render('products/productDetail');
 },
     productCart:  (req, res) => {
@@ -36,7 +46,7 @@ const controller = {
 },
 abmProducts:  (req, res) => {
     res.render('products/abmproducts');
-},
-};
+}, */
+}; 
 
 module.exports = controller

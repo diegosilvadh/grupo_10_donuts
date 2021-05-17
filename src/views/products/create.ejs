@@ -13,25 +13,22 @@
                     <div class="column is-6"><!--REVISAR-->
                         <h2 class= "title-h2">Nuevo producto</h2>
                         <form action="/products" method="POST" enctype="multipart/form-data">
-
                             <div class="field-div">
-                                <label for="id">Id</label>
+                                <label class="label-field register-h2" for="name">Nombre</label>
                                 <div class="field-text">
-                                    <input type="text" name="id" id="id" value="">
+                                    <input type="text" name="name" id="name"
+                                    alue="<%= locals.oldData ? oldData.name : null %>">
                                 </div>
-                               
-                            </div>
-                            
-                            <div class="field-div">
-                                <label for="name">Nombre</label>
-                                <div class="field-text">
-                                    <input type="text" name="name" id="name" value="">
-                                </div>
+                                <% if (locals.errors && errors.name) { %>
+                                    <div class="text-danger field-text">
+                                        <%= errors.name.msg  %> 
+                                    </div>
+                                <% } %>
                                
                             </div>
 
                             <div class="field-div">
-                                <label for="price">Precio</label>
+                                <label class="label-field register-h2" for="price">Precio</label>
                                 <div class="field-text">
                                     <input type="text" name="price" id="price" value="">
                                 </div>
@@ -39,15 +36,15 @@
                             </div>
 
                             <div class="field-div">
-                                <label for="discountValue">Descuento</label>
+                                <label class="label-field register-h2" for="discount_value">Descuento</label>
                                 <div class="field-text">
-                                    <input type="text" name="discountValue" id="discountValue" value="">
+                                    <input type="text" name="discount_value" id="discount_value" value="">
                                 </div>
                               
                             </div>
 
                             <div class="field-div">
-                                <label for="discount">Tiene descuento</label>
+                                <label class="label-field register-h2" for="discount">Tiene descuento</label>
                                 <div class="field-text">
                                     <input type="discount" name="discount" id="discount">
                                 </div>
@@ -55,16 +52,16 @@
                             </div>
 
                             <div class="field-div">
-                                <label for="images">Imagen de producto</label>
+                                <label class="label-field register-h2" for="image">Imagen de producto</label>
                                 <div class="field-text">
-                                    <input type="file" name="images" id="images">
+                                    <input type="file" name="image" id="image">
                                 </div>
                               
                             </div>
 
                             
                             <div class="field-div">
-                                <label for="description">Descripción</label>
+                                <label class="label-field register-h2" for="description">Descripción</label>
                                 <div class="field-text">
                                     <input type="description" name="description" id="description">
                                 </div>

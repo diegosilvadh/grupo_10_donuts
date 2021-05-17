@@ -125,7 +125,7 @@ const controller = {
             }
         })
             .then(() => {
-                res.render('/users',);
+                res.redirect('/users');
             })
     },
     profile: (req, res) => {

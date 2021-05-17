@@ -13,18 +13,9 @@
                 <div class="columns is-centered"><!--REVISAR-->
                     <div class="column is-6"><!--REVISAR-->
                         <h2 class= "title-h2">Editá tu producto</h2>
-                        <form action="/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-
+                        <form action="/products/<%= product.id_product %>?_method=PUT" method="POST" enctype="multipart/form-data">
                             <div class="field-div">
-                                <label for="id">Id</label>
-                                <div class="field-text">
-                                    <input type="text" name="id" id="id" value="<%= product.id %>" readonly>
-                                </div>
-                               
-                            </div>
-                            
-                            <div class="field-div">
-                                <label for="name">Nombre</label>
+                                <label class="label-field register-h2" for="name">Nombre</label>
                                 <div class="field-text">
                                     <input type="text" name="name" id="name" value="<%= product.name %>">
                                 </div>
@@ -32,7 +23,7 @@
                             </div>
 
                             <div class="field-div">
-                                <label for="price">Precio</label>
+                                <label class="label-field register-h2" for="price">Precio</label>
                                 <div class="field-text">
                                     <input type="text" name="price" id="price" value="<%= product.price %>">
                                 </div>
@@ -40,15 +31,15 @@
                             </div>
 
                             <div class="field-div">
-                                <label for="discountValue">Descuento</label>
+                                <label class="label-field register-h2" for="discount_value">Descuento</label>
                                 <div class="field-text">
-                                    <input type="text" name="discountValue" id="discountValue" value="<%= product.discountValue %>">
+                                    <input type="text" name="discount_value" id="discoun_value" value="<%= product.discount_value %>">
                                 </div>
                               
                             </div>
 
                             <div class="field-div">
-                                <label for="discount">Tiene descuento</label>
+                                <label class="label-field register-h2" for="discount">Tiene descuento</label>
                                 <div class="field-text">
                                     <input type="discount" name="discount" id="discount" value="<%= product.discount %>">
                                 </div>
@@ -56,16 +47,16 @@
                             </div>
 
                             <div class="field-div">
-                                <label for="images">Imagen de producto</label>
+                                <label class="label-field register-h2" for="image">Imagen de producto</label>
                                 <div class="field-text">
-                                    <input type="file" name="images" id="images">
+                                    <input type="file" name="image" id="image">
                                 </div>
                               
                             </div>
 
                             
                             <div class="field-div">
-                                <label for="description">Descripción</label>
+                                <label class="label-field register-h2" for="description">Descripción</label>
                                 <div class="field-text">
                                     <input type="description" name="description" id="description" value="<%= product.description %>">
                                 </div>
@@ -74,7 +65,7 @@
 
                             
                             <div class="field-div">
-                                <label for="iconImage">Icono de descuento</label>
+                                <label class="label-field register-h2" for="iconImage">Icono de descuento</label>
                                 <div class="field-text">
                                     <input type="file" name="iconImage" id="iconImage">
                                 </div>
@@ -89,7 +80,7 @@
                         </form>
                         <div class="field-div">
                             <div class="field-text">
-                                <form class="field-div" action="/products/<%= product.id %>?_method=delete" method="POST">
+                                <form class="field-div" action="/products/<%= product.id_product %>?_method=delete" method="POST">
                                 <button>Borrar producto</button>
                                 </form> 
                             </div>
