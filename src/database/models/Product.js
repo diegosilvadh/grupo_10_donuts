@@ -22,6 +22,9 @@ module.exports = (sequelize, dataTypes) => {
         },
         description: {
             type: dataTypes.STRING(2000)
+        },
+        icon_image: {
+            type: dataTypes.STRING(100)
         }
     }, {
         tableName: 'products',

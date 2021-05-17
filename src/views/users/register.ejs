@@ -20,7 +20,7 @@
                     <div class="field-div">
                         <label class="label-field register-h2" for="first_name">Nombre:</label>
                         <input class="field-text" type="text" name="first_name" id="first_name" placeholder="Nombre"
-                        value="<%= locals.oldData ? oldData.first_name : null %>">
+                        value="<%= locals.oldData ? oldData.first_name : null %>" required="required" minlength="2">
                     </div>
                     <% if (locals.errors && errors.first_name) { %>
                         <div class="text-danger field-text">
@@ -30,7 +30,7 @@
                     <div class="field-div">
                         <label class="label-field register-h2" for="last_name">Apellido:</label>
                         <input class="field-text" type="text" name="last_name" id="last_name" placeholder="Apellido"
-                        value="<%= locals.oldData ? oldData.last_name : null %>">
+                        value="<%= locals.oldData ? oldData.last_name : null %>" required="required" minlength="2">
                     </div>
                     <% if (locals.errors && errors.last_name) { %>
                         <div class="text-danger field-text">
@@ -40,7 +40,7 @@
                     <div class="field-div">
                         <label class="label-field  register-h2" for="username">Nombre de Usuario:</label>
                         <input class="field-text" type="text" name="username" id="username" placeholder="Username"
-                        value="<%= locals.oldData ? oldData.username : null %>">
+                        value="<%= locals.oldData ? oldData.username : null %>" required="required" minlength="2">
                     </div>
                     <% if (locals.errors && errors.username) { %>
                         <div class="text-danger field-text">
@@ -51,7 +51,7 @@
                         <label class="label-field  register-h2" for="birthday">Fecha de Nacimiento:</label>
                         <input class="field-date  register-h2" type="date" name="birthday" id="birthday"
                          placeholder="Fecha de Nacimiento"
-                         value="<%= locals.oldData ? oldData.birthday : null %>">
+                         value="<%= locals.oldData ? oldData.birthday : null %>" required="required">
                     </div>
                     <% if (locals.errors && errors.birthday) { %>
                         <div class="text-danger field-text">
@@ -61,7 +61,7 @@
                     <div class="field-div">
                         <label class="label-field register-h2" for="email">Email:</label>
                         <input class="field-text" type="email" name="email" id="email" placeholder="Escribe tu dirección"
-                        value="<%= locals.oldData ? oldData.email : null %>">
+                        value="<%= locals.oldData ? oldData.email : null %>" required="required">
                     </div>
                     <% if (locals.errors && errors.email) { %>
                         <div class="text-danger field-text">
@@ -89,7 +89,7 @@
                     <div class="field-div">
                     <br>
                         <label class="label-field register-h2" for="avatar">Avatar de Usuario:</label>
-                            <input class="field-text  register-h2" type="file"  id="avatar" name="avatar" accept=".png, .jpg" style="color: transparent">
+                            <input class="field-text  register-h2" type="file"  id="avatar" name="avatar" accept=".png, .jpg, .jpeg, .gif" style="color: transparent" required="required">
                     </div>
                     <% if (locals.errors && errors.avatar) { %>
                         <div class="text-danger field-text">
@@ -98,7 +98,8 @@
                     <% } %>
                     <div class="field-div">
                         <label class="label-field register-h2" for="password">Contraseña:</label>
-                        <input class="field-text" type="password" name="password" id="password" minlength="8" pattern=".{8,}">
+                        <input class="field-text" type="password" name="password" id="password" minlength="8" pattern=".\d)(?=.[a-z])(?=.*[A-Z]).{8,}" 
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
                     </div>
                     <% if (locals.errors && errors.password) { %>
                         <div class="text-danger field-text">
@@ -107,7 +108,8 @@
                     <% } %>
                     <div class="field-div">
                         <label class="label-field register-h2" for="confirm-password">Confirmar Contraseña:</label>
-                        <input class="field-text" type="password" name="confirm-password" id="confirm-password" minlength="8" pattern=".{8,}">
+                        <input class="field-text" type="password" name="confirm-password" id="confirm-password" minlength="8" pattern=".\d)(?=.[a-z])(?=.*[A-Z]).{8,}" 
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
                     </div>
                     <div class="field-div">
                         <button class="button-register" type="submit" value="Submit">Creá tu Cuenta</button>
