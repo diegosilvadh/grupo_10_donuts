@@ -18,7 +18,7 @@
                 <form method="POST" action="/users/login">
                     <div class="field-div">
                         <label class="label-field login-h2" for="email">Dirección de Correo:</label>
-                        <input  class="field-text" type="text" name="email" id="email"  minlength="3" placeholder="Escribe tu Mail"
+                        <input  class="field-text" type="email" name="email" id="email"  minlength="3" placeholder="Escribe tu Mail" required="required"
                         value="<%= locals.oldData ? oldData.email : null %>">
                     </div>
                     <% if (locals.errors && errors.email) { %>
@@ -28,7 +28,7 @@
                     <% } %>
                     <div class="field-div">
                         <label class="label-field login-h2" for="password">Contraseña:</label>
-                        <input class="field-text" type="password" name="password" id="password" placeholder="Escribí tu contraseña" class="field-text">
+                        <input class="field-text" type="password" name="password" id="password" placeholder="Escribí tu contraseña" minlength="8" pattern=".\d)(?=.[a-z])(?=.*[A-Z]).{8,}" required="required">
                     </div>
                     <% if (locals.errors && errors.password) { %>
                         <div class="text-danger field-text">

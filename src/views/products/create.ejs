@@ -16,7 +16,7 @@
                             <div class="field-div">
                                 <label class="label-field register-h2" for="name">Nombre</label>
                                 <div class="field-text">
-                                    <input type="text" name="name" id="name"
+                                    <input type="text" name="name" id="name" required="required" minlength="5"
                                     value="<%= locals.oldData ? oldData.name : null %>">
                                 </div>
                                 <% if (locals.errors && errors.name) { %>
@@ -30,7 +30,7 @@
                             <div class="field-div">
                                 <label class="label-field register-h2" for="price">Precio</label>
                                 <div class="field-text">
-                                    <input type="text" name="price" id="price" 
+                                    <input type="text" name="price" id="price" required="required" 
                                     value="<%= locals.oldData ? oldData.price : null %>">
                                 </div>
                                 <% if (locals.errors && errors.price) { %>
@@ -58,7 +58,7 @@
                             <div class="field-div">
                                 <label class="label-field register-h2" for="discount">Tiene descuento</label>
                                 <div class="field-text">
-                                    <input type="discount" name="discount" id="discount"
+                                    <input type="discount" name="discount" id="discount" required="required"
                                     value="<%= locals.oldData ? oldData.discount : null %>">
                                 </div>
                                 <% if (locals.errors && errors.discount) { %>
@@ -71,7 +71,7 @@
                             <div class="field-div">
                                 <label class="label-field register-h2" for="image">Imagen de producto</label>
                                 <div class="field-text">
-                                    <input type="file" name="image" id="image">
+                                    <input type="file" name="image" id="image" accept=".png, .jpg, .jpeg, .gif">
                                 </div>
                               
                             </div>
@@ -84,7 +84,7 @@
                             <div class="field-div">
                                 <label class="label-field register-h2" for="description">Descripción</label>
                                 <div class="field-text">
-                                    <input type="description" name="description" id="description"
+                                    <input type="description" name="description" id="description" required="required" minlength="20"
                                     value="<%= locals.oldData ? oldData.description : null %>">
                                 </div>
                                 <% if (locals.errors && errors.description) { %>

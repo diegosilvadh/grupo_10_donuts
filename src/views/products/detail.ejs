@@ -29,6 +29,11 @@
                                 <% } %>
                                 <p>Descripción:<%= product.description %></p>
                             </div>
+                            <div class="field-div card-content">
+                                <div class="field-text">
+                                    <button type="submit" onclick="location.href='/products/<%= product.id_product %>/edit' ">Editar producto</button>
+                                </div>
+                            </div>
                         </article>
                             
        <!-- Fin Menu en Base de datos -->

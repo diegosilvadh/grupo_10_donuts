@@ -17,17 +17,26 @@
                             <div class="field-div">
                                 <label class="label-field register-h2" for="name">Nombre</label>
                                 <div class="field-text">
-                                    <input type="text" name="name" id="name" value="<%= product.name %>">
+                                    <input type="text" name="name" id="name" value="<%= product.name %>" required="required" minlength="5">
                                 </div>
+                                <% if (locals.errors && errors.name) { %>
+                                    <div class="text-danger field-text">
+                                        <%= errors.name.msg  %> 
+                                    </div>
+                                <% } %>
                                
                             </div>
 
                             <div class="field-div">
                                 <label class="label-field register-h2" for="price">Precio</label>
                                 <div class="field-text">
-                                    <input type="text" name="price" id="price" value="<%= product.price %>">
+                                    <input type="text" name="price" id="price" required="required" value="<%= product.price %>">
                                 </div>
-                                
+                                <% if (locals.errors && errors.price) { %>
+                                    <div class="text-danger field-text">
+                                        <%= errors.price.msg  %> 
+                                    </div>
+                                <% } %>
                             </div>
 
                             <div class="field-div">
@@ -35,43 +44,47 @@
                                 <div class="field-text">
                                     <input type="text" name="discount_value" id="discoun_value" value="<%= product.discount_value %>">
                                 </div>
-                              
+                                <% if (locals.errors && errors.discount_value) { %>
+                                    <div class="text-danger field-text">
+                                        <%= errors.discount_value.msg  %> 
+                                    </div>
+                                <% } %>
                             </div>
 
                             <div class="field-div">
                                 <label class="label-field register-h2" for="discount">Tiene descuento</label>
                                 <div class="field-text">
-                                    <input type="discount" name="discount" id="discount" value="<%= product.discount %>">
+                                    <input type="discount" name="discount" id="discount" required="required" value="<%= product.discount %>">
                                 </div>
-                              
+                                <% if (locals.errors && errors.discount) { %>
+                                    <div class="text-danger field-text">
+                                        <%= errors.discount.msg  %> 
+                                    </div>
+                                <% } %>
                             </div>
 
                             <div class="field-div">
                                 <label class="label-field register-h2" for="image">Imagen de producto</label>
                                 <div class="field-text">
-                                    <input type="file" name="image" id="image">
+                                    <input type="file" name="image" id="image" required="required">
                                 </div>
-                              
+                                <% if (locals.errors && errors.image) { %>
+                                    <div class="text-danger field-text">
+                                        <%= errors.image.msg  %> 
+                                    </div>
+                                <% } %>
                             </div>
-
-                            
                             <div class="field-div">
                                 <label class="label-field register-h2" for="description">Descripción</label>
                                 <div class="field-text">
-                                    <input type="description" name="description" id="description" value="<%= product.description %>">
+                                    <input type="description" name="description" id="description" required="required" minlength="20" value="<%= product.description %>">
                                 </div>
-                              
+                                <% if (locals.errors && errors.description) { %>
+                                    <div class="text-danger field-text">
+                                        <%= errors.description.msg  %> 
+                                    </div>
+                                <% } %>
                             </div>
-
-                            
-                            <div class="field-div">
-                                <label class="label-field register-h2" for="iconImage">Icono de descuento</label>
-                                <div class="field-text">
-                                    <input type="file" name="iconImage" id="iconImage">
-                                </div>
-                              
-                            </div>
-
                             <div class="field-div">
                                 <div class="field-text">
                                     <button type="submit">Editar producto</button>

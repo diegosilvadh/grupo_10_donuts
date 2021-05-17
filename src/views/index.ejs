@@ -30,7 +30,7 @@
                                 <% } %>
                                 <p class="price"><%= product.price %></p>
                                 <p class="discount"><%= product.discount_value %></p>
-                                <a href="/productDetail"><h4 class="description"><%= product.description %></h4></a>
+                                <a href="/products/<%= product.id_product %>"><h4 class="description"><%= product.description %></h4></a>
                             </div>
                         </article>
                         <%});%>

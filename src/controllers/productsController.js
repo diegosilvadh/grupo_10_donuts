@@ -40,7 +40,8 @@ const controller = {
             discount_value,
             discount,
             description,
-            image: file ? file.filename: image
+            image: file ? file.filename: image,
+            icon_image: discount == 1 ? "fab fa-hotjar" : "ico-donut.jpg"
         })
         .then (product => {
             res.render('products/detail', { product });

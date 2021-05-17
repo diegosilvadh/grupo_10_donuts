@@ -89,7 +89,8 @@
                     <div class="field-div">
                     <br>
                         <label class="label-field register-h2" for="avatar">Avatar de Usuario:</label>
-                            <input class="field-text  register-h2" type="file"  id="avatar" name="avatar" accept=".png, .jpg, .jpeg, .gif" style="color: transparent" required="required">
+                            <input class="field-text  register-h2" type="file"  id="avatar" name="avatar" accept=".png, .jpg, .jpeg, .gif" style="color: transparent" required="required"
+                            value="<%= locals.oldData ? oldData.avatar : null %>">
                     </div>
                     <% if (locals.errors && errors.avatar) { %>
                         <div class="text-danger field-text">

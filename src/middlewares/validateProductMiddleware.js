@@ -10,7 +10,8 @@ module.exports = [
     body('discount')
         .notEmpty().withMessage('Debes ingresar si tiene descuento').bail(),
     body('description')
-        .notEmpty().withMessage('Debes ingresar una descripción'),
+        .notEmpty().withMessage('Debes ingresar una descripción').bail()
+        .isLength({ min: 20, max:200 }).withMessage('La descripción debe ser de al menos 20 caracteres'),
     body('image').custom((value, { req }) => {
             let file = req.file;
             let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
