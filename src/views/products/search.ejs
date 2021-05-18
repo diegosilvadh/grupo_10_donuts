@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('./../partials/head') %>
+        <title>Donas</title>
+    </head>
+    <body>
+
+    <!--incluimos partials del header-->
+    <%- include('./../partials/header') %>
+
+        <main>
+            <div class="container">
+                <section>
+                    <h2 class="title-h2">Listado de Productos</h2>
+                    <div >
+        <!-- Menu en Base de datos -->
+                        <% products.forEach(product => { %> 
+                        <article class="card"> 
+                            <p><strong>Nombre: <%= product.name %></strong></p>
+                            <div class="card-left">
+                                <figure>
+                                    <img class="product_img" src= /img/<%= product.image %> alt= <%= product.name%> >
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p>Precio: $<%= product.price %></p>
+                                <% if (product.discount === 1) { %>
+                                    <p>Descuento: <%= product.discount_value %></p>
+                                <% } %>
+                                <p>Descripción:<%= product.description %></p>
+                            </div>
+                        </article>
+                        <%});%>
+                            
+       <!-- Fin Menu en Base de datos -->
+                    </div>
+                </section>
+            </div>
+        </main>
+
+    <!--incluimos partials del footer-->
+    <%- include('./../partials/footer') %>
+    </body>
+</html>

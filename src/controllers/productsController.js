@@ -7,6 +7,7 @@ const productsTable = jsonTable('products');
 const db = require("../database/models");
 const { Product } = require("../database/models")
 const { validationResult } = require('express-validator');
+const { Op } = require("sequelize");
 
 const controller = {
     index: (req, res) => {
@@ -105,6 +106,17 @@ const controller = {
             .then(() => {
                 res.redirect('/products');
             })
+    },
+    search: (req,res) => {
+        console.log('data', req.query.keyword);
+        Product.findAll({
+            where: {
+                name: { [Op.like]: '%' + req.query.keyword + '%' }
+            }
+        })
+        .then  ((products) => {
+            res.render('products/search', { products });
+        })
     },
 
 // Controller Products

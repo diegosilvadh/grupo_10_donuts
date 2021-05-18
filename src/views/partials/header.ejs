@@ -4,13 +4,18 @@
         <!--comento este div para ir prbando limpiar el codigo
         <div class="main-header-top-bar">
         -->
-            <a href="/"><img src="/img/logo.png" class="logo"></a>    
-            <div class="search">
-                <input type="text" placeholder="Search your donut">
-                <div class="icono">
-                    <i class="fas fa-search"></i>
-                </div>
+            <a href="/"><img src="/img/logo.png" class="logo"></a>
+            <div>
+                <form class="search" method="GET" action="/products/search"> 
+                    <input id="input-search" type="text" placeholder="Search your donut" name="keyword">
+                    <button id="button-search" disabled><i class="fas fa-search"></i></button>
+            </form> 
+            <div class="icono">
+                
             </div>
+            <!--<button id="button-search" disabled>BUSCAR</button> -->
+                    
+        </div>
         <!--comento este div para ir prbando limpiar el codigo                        
         </div>        
         -->
@@ -35,9 +40,11 @@
             Hola 
             </a>
             -->
-            <a class="dropdown-item" href="/users/profile">My profile</a>
+            <a class="dropdown-item" href="/users/profile">My profile </a>
             <li><hr class="dropdown-divider"></li>
-            <a class="dropdown-item" href="/users/logout">Logout</a>
+            <a class="dropdown-item" href="/users/"> Usuarios </a>
+            <li><hr class="dropdown-divider"></li>
+            <a class="dropdown-item" href="/users/logout"> Logout</a>
             
         </ul>
         <% } else { %>
@@ -47,5 +54,22 @@
         </ul>
         <% } %>
     </nav>
+    <script>
+        /*
+        - Escuchar cada vez que el usuario escribe una tecla
+        - Habilitar/Deshabilitar el botón de enviar cuando hayan más de 3 caracteres
+        */
 
+        const searchInput = document.querySelector("#input-search")
+        const button = document.querySelector("#button-search")
+
+        searchInput.addEventListener("keyup", function(e) {
+         if (searchInput.value.length >= 3) {
+             button.removeAttribute("disabled")
+         } else {
+             button.setAttribute("disabled", "")
+         }
+        })
+
+     </script>
 </header>
