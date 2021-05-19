@@ -30,6 +30,7 @@ const mainRouter = require('./routes/mainRouter');
 const productsRouter = require('./routes/productsRouter');
 const apiProductsRouter = require('./routes/api/productsRouter');
 const apiUsersRouter = require('./routes/api/usersRouter');
+const apiCategoriesRouter = require('./routes/api/categoriesRouter');
 const usersRouter = require('./routes/usersRouter');
 const session = require('express-session');
 const cookies = require('cookie-parser');
@@ -57,6 +58,7 @@ app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/api/products', apiProductsRouter);
 app.use('/api/users', apiUsersRouter);
+app.use('/api/categories', apiCategoriesRouter);
 app.use((req,res,next) => {
     res.status(404).render("not-found");
 });
