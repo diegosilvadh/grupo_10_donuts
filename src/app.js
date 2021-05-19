@@ -9,11 +9,13 @@ const auth = require('./middlewares/auth.js');
 app.use(express.static('./public'));
 app.set('view engine', 'ejs')
 app.set('views', './src/views')
+const cors = require('cors')
 
 
 // Formularios
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
+app.use(cors())
 
 // Levantamos el WebServer
 
