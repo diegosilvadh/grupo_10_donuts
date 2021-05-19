@@ -28,6 +28,11 @@
                                     <p>Descuento: <%= product.discount_value %></p>
                                 <% } %>
                                 <p>Descripción:<%= product.description %></p>
+                                <% categories.forEach(category => { %>
+                                    <% if (category.id_category === product.id_category) { %>
+                                        <p>Categoría:<%= category.name %></p>
+
+                                <% }}) %>
                             </div>
                             <div class="field-div card-content">
                                 <div class="field-text">

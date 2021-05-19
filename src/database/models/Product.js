@@ -25,6 +25,9 @@ module.exports = (sequelize, dataTypes) => {
         },
         icon_image: {
             type: dataTypes.STRING(100)
+        },
+        id_category: {
+            type: dataTypes.INTEGER(11)
         }
     }, {
         tableName: 'products',
@@ -38,6 +41,10 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: 'id_product',
             otherKey: 'id_user',
             timestamps: false,
+        })
+        Product.belongsTo(models.Category, {
+                as: 'category',
+                foreignKey: 'id_category'
         })
     }
 

@@ -6,6 +6,7 @@ const jsonTable = require('../database/jsonTable');
 const productsTable = jsonTable('products');
 const db = require("../database/models");
 const { Product } = require("../database/models")
+const { Category } = require("../database/models");
 const { validationResult } = require('express-validator');
 const { Op } = require("sequelize");
 
@@ -21,12 +22,16 @@ const controller = {
         
     },
     create: (req, res) => {
-        res.render('products/create');
+        Category.findAll()
+            .then(categories => {
+                res.render('products/create', {
+                categories
+                });
+            })
     },
     store: (req, res) => {
         // Generamos el nuevo Producto
         const resultValidation = validationResult(req);
-        console.log(resultValidation);
         if (resultValidation.errors.length > 0) {
             return res.render('products/create', {
             errors: resultValidation.mapped(),
@@ -34,7 +39,7 @@ const controller = {
         });
         }
         const { file } = req;
-        let { name, price, discount_value, discount, description } = req.body;
+        let { name, price, discount_value, discount, description, id_category } = req.body;
         Product.create({
             name,
             price,
@@ -42,7 +47,8 @@ const controller = {
             discount,
             description,
             image: file ? file.filename: image,
-            icon_image: discount == 1 ? "fab fa-hotjar" : "ico-donut.jpg"
+            icon_image: discount == 1 ? "fab fa-hotjar" : "ico-donut.jpg",
+            id_category,
         })
         .then (product => {
             res.render('products/detail', { product });
@@ -53,29 +59,42 @@ const controller = {
           })
     },
     show: (req, res) => {
-        Product.findByPk(req.params.id)
-            .then(product => {
-                if ( product ) {
-                    res.render('products/detail', { product });
-                } else {
-                    res.send('No encontré el producto');
-                }
+        Promise.all([
+            Category.findAll(), 
+            Product.findOne({ 
+                where: {
+                    id_product: req.params.id
+                },
             })
+        ])
+        .then(([categories, product]) => {
+            if ( product ) {
+               res.render('products/detail', { categories, product })
+            } else {
+                res.send('No encontré el producto');
+            }
+        })
     },
     edit: (req, res) => {
-        Product.findByPk(req.params.id)
-            .then(product => {
-                if ( product ) {
-                    res.render('products/edit', { product });
-                } else {
-                    res.send('No encontré el producto');
-                }
+        Promise.all([
+            Category.findAll(), 
+            Product.findOne({ 
+                where: {
+                    id_product: req.params.id
+                },
             })
-
+        ])
+        .then(([categories, product]) => {
+            if ( product ) {
+               res.render('products/edit', { categories, product })
+            } else {
+                res.send('No encontré el producto');
+            }
+        })
     },
     update: (req, res) => {
         const { file } = req;
-        const { name, price, discount_value, discount, description} = req.body;
+        const { name, price, discount_value, discount, description, id_category} = req.body;
         Product.findOne({
             where: {id_product: req.params.id},    
             })
@@ -87,6 +106,7 @@ const controller = {
                     discount,
                     description,
                     image: file ? file.filename: product.image,
+                    id_category
             })
             .then  (() => {
                 res.render('products/detail', { product });
@@ -108,7 +128,6 @@ const controller = {
             })
     },
     search: (req,res) => {
-        console.log('data', req.query.keyword);
         Product.findAll({
             where: {
                 name: { [Op.like]: '%' + req.query.keyword + '%' }

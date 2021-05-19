@@ -91,8 +91,15 @@
                                     <div class="text-danger field-text">
                                         <%= errors.description.msg  %> 
                                     </div>
-                                <% } %>
-                              
+                                <% } %>  
+                            </div>
+                            <div class='field-div'>
+                                <label class="label-field register-h2" for="category">Categoría</label>
+                                <select required name="id_category">
+                                    <% categories.forEach(category => { %>
+                                        <option value="<%= category.id_category %>"><%= category.name %></option>
+                                    <% }) %>
+                                </select>
                             </div>
 
                             <div class="field-div">

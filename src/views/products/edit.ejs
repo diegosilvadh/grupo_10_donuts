@@ -85,6 +85,14 @@
                                     </div>
                                 <% } %>
                             </div>
+                            <div class='field-div'>
+                                <label class="label-field register-h2" for="category">Categoría</label>
+                                <select required name="id_category">
+                                    <% categories.forEach(category => { %>
+                                        <option value="<%= category.id_category %>" <%= product.id_category === category.id_category ? 'selected' : '' %>><%= category.name %></option>
+                                    <% }) %>
+                                </select>
+                            </div>
                             <div class="field-div">
                                 <div class="field-text">
                                     <button type="submit">Editar producto</button>
