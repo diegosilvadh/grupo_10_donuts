@@ -5,8 +5,12 @@ const router = express.Router();
 const productsController = require('../controllers/productsController');
 const path = require('path');
 
-const multer = require('multer');
+
 const validateProductMiddleware = require('../middlewares/validateProductMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
+
+const multer = require('multer');
 const storage = multer.diskStorage({
     destination: (req, file, callback) => {
         callback(null, path.join(__dirname, '../../public/img/'));
@@ -19,14 +23,14 @@ const upload = multer({ storage });
 
 // Rutas de Controller
 router.get('/', productsController.index);
-router.get('/create', productsController.create);
+router.get('/create', authMiddleware, productsController.create);
 router.get('/promotions', productsController.promotions);
 router.get('/search', productsController.search);
 router.get('/:id', productsController.show);
 router.post('/', upload.single('image'), validateProductMiddleware, productsController.store);
-router.get('/:id/edit', validateProductMiddleware, productsController.edit);
+router.get('/:id/edit', authMiddleware, validateProductMiddleware, productsController.edit);
 router.put('/:id', upload.single('image'), productsController.update);
-router.delete('/:id', productsController.destroy);
+router.delete('/:id', authMiddleware, productsController.destroy);
 //router.get('/productDetail', productsController.productDetail);
 //router.get('/productCart', productsController.productCart);
 //router.get('/abmProducts', productsController.abmProducts);

@@ -33,11 +33,11 @@ router.post('/login', validateLoginMiddleware, usersController.loginProcess);
 router.get('/profile', authMiddleware, usersController.profile)
 router.post('/', upload.single('avatar'),validateRegisterMiddleware,  usersController.store);
 
-router.get('/', usersController.index);
+router.get('/', authMiddleware, usersController.index);
 // Logout
 router.get('/logout', usersController.logout);
-router.get('/:id', usersController.show);
-router.get('/:id/edit', usersController.edit);
+router.get('/:id', authMiddleware, usersController.show);
+router.get('/:id/edit', authMiddleware, usersController.edit);
 router.put('/:id', upload.single('avatar'), usersController.update);
 router.delete('/:id', usersController.destroy);
 

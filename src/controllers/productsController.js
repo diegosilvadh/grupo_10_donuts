@@ -2,9 +2,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const jsonTable = require('../database/jsonTable');
-const productsTable = jsonTable('products');
-const db = require("../database/models");
 const { Product } = require("../database/models")
 const { Category } = require("../database/models");
 const { validationResult } = require('express-validator');
@@ -95,10 +92,15 @@ const controller = {
     update: (req, res) => {
         const { file } = req;
         const { name, price, discount_value, discount, description, id_category} = req.body;
-        Product.findOne({
-            where: {id_product: req.params.id},    
+        Promise.all([
+            Category.findAll(), 
+            Product.findOne({ 
+                where: {
+                    id_product: req.params.id
+                },
             })
-            .then ((product) => {
+        ])
+            .then (([categories, product]) => {
                 product.update({
                     name,
                     price,
@@ -109,7 +111,7 @@ const controller = {
                     id_category
             })
             .then  (() => {
-                res.render('products/detail', { product });
+                res.render('products/detail', { product,categories });
             })
             .catch(err => {
                 console.log('ERROR', err)

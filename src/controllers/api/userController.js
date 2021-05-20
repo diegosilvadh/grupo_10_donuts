@@ -26,8 +26,26 @@ const controller = {
             }
             res.status(302).json (response);
         })
+    },
+
+    last: (req,res) => {
+        db.User.findOne( {
+            order: [
+                ['id_user', 'DESC']
+            ]},    
+        )
+        .then(function(users){
+            const response = {
+                meta: {
+                    count: users.length,
+                },
+                results: users
+            }
+            res.status(302).json (response);
+        })
+
     }
 
 };
 
-module.exports = controller
+module.exports = controller 
