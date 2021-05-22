@@ -4,6 +4,6 @@ module.exports = (req, res, next) => {
         res.locals.userEmail = req.session.userEmail;
     };
     res.locals.session = req.session;
-    console.log('auth.js : DATOS ACTUALES DE MI SESSION :', res.locals.session);
+    console.log('auth.js :', res.locals.session);
     next();
 };

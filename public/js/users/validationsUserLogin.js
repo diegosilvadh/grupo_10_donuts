@@ -39,12 +39,12 @@
             errors = true
 
         }
-        if (!validationPassword.test(password.value)) {
+        /* if (!validationPassword.test(password.value)) {
             errorPassword.innerText = 'La contraseña debe cumplir con la política ( Minúscula, Mayúscula, Numero y Símbolo';
             errorPassword.style.display = "block"
             errors = true
-        }
-        if (password.value.length < 8) {
+        } */
+        if (!password.value) {
             errorPassword.innerText = 'Debe ingresar la contraseña';
             errorPassword.style.display = "block"
             errors = true
