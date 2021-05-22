@@ -7,6 +7,7 @@ const usersController = require('../../controllers/api/userController');
 
 // Rutas de API Controller Users
 router.get('/', usersController.index);
-router.get('/:id', usersController.show)
+router.get('/last', usersController.last);
+router.get('/:id', usersController.show);
 
 module.exports = router;

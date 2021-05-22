@@ -21,16 +21,18 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-// Rutas de Controller
-router.get('/', productsController.index);
+
+//router.get('/create', authMiddleware, productsController.create);
 router.get('/create', authMiddleware, productsController.create);
 router.get('/promotions', productsController.promotions);
 router.get('/search', productsController.search);
 router.get('/:id', productsController.show);
-router.post('/', upload.single('image'), validateProductMiddleware, productsController.store);
+router.post('/create', upload.single('image'),  validateProductMiddleware, productsController.store);
 router.get('/:id/edit', authMiddleware, validateProductMiddleware, productsController.edit);
 router.put('/:id', upload.single('image'), productsController.update);
 router.delete('/:id', authMiddleware, productsController.destroy);
+// Rutas de Controller
+router.get('/', productsController.index);
 //router.get('/productDetail', productsController.productDetail);
 //router.get('/productCart', productsController.productCart);
 //router.get('/abmProducts', productsController.abmProducts);

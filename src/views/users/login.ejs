@@ -15,12 +15,13 @@
         <div class="contendor">
             <section class="section-login">
                 <h3>¡Hola! Ingresá tu usuario, ¿Con qué vas a endulzar tu día?</h3>
-                <form method="POST" action="/users/login">
+                <form method="POST" action="/users/login" id="form-login">
                     <div class="field-div">
                         <label class="label-field login-h2" for="email">Dirección de Correo:</label>
-                        <input  class="field-text" type="email" name="email" id="email"  minlength="3" placeholder="Escribe tu Mail" required="required"
+                        <input  class="field-text" name="email" id="email"  placeholder="Escribe tu Mail"
                         value="<%= locals.oldData ? oldData.email : null %>">
                     </div>
+                    <div class="error-message error-email"></div>
                     <% if (locals.errors && errors.email) { %>
                         <div class="text-danger field-text">
                             <%= errors.email.msg  %> 
@@ -28,8 +29,9 @@
                     <% } %>
                     <div class="field-div">
                         <label class="label-field login-h2" for="password">Contraseña:</label>
-                        <input class="field-text" type="password" name="password" id="password" placeholder="Escribí tu contraseña" minlength="8" pattern=".\d)(?=.[a-z])(?=.*[A-Z]).{8,}" required="required">
+                        <input class="field-text" type="password" name="password" id="password" placeholder="Escribí tu contraseña">
                     </div>
+                    <div class="error-message error-password"></div>
                     <% if (locals.errors && errors.password) { %>
                         <div class="text-danger field-text">
                             <%= errors.password.msg  %> 
@@ -48,5 +50,8 @@
     </main>
     <!--incluimos partials del footerUser-->
     <%- include('./../partials/footerUser') %>
+
+    <!--incluimos Validaciones-->
+    <script src='/js/users/validationsUserLogin.js'></script>
 </body>
 </html>

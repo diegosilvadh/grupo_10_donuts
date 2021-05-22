@@ -325,7 +325,7 @@ article div.main-article{
 /*register, login*/
 
 .body-login, .body-register, .body-abm {
-    background-image: url("../img/background.png");
+    /*background-image: url("../img/background.png"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -394,6 +394,7 @@ article div.main-article{
 }
 
 .field-div {
+    position: relative;
     display: flex;
     flex-direction: column; /* seteo filas por default Responsive Login*/
 }
@@ -403,7 +404,7 @@ article div.main-article{
     flex-direction: row;
     justify-content: right;
     justify-items: right;
-    width: 200px; /* Cambio 20 rem por 200px Responsive login */
+   /* width: 200px;  Cambio 20 rem por 200px Responsive login */
     outline: 0;
     border-width: 0 0 .1rem;
     border-color: dimgray;
@@ -713,6 +714,27 @@ p em strong{
     .text-danger {
         color: blue;
     }
+    
+    /* Styles Errores JS Front */
+
+    .error-message {
+        color: red;
+        display: none
+    }
+
+    .icon-validation{
+        position: absolute;
+        top: 7px;
+        right: 120px;
+        width: 12px;
+        display: block;
+    }
+
+    .form {
+        gap: 10px;
+    }
+
+
 
 @media (min-width:380px){
     .field-div{

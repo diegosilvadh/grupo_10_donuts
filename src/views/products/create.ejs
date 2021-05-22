@@ -9,38 +9,36 @@
     <main>
         <div class="container">
             <section>
-                <div class="columns is-centered"><!--REVISAR-->
-                    <div class="column is-6"><!--REVISAR-->
+                <div class="columns is-centered">
+                    <div class="column is-6">
                         <h2 class= "title-h2">Nuevo producto</h2>
-                        <form action="/products" method="POST" enctype="multipart/form-data">
+                        <form action="/products/create" method="POST" id="form-register" enctype="multipart/form-data">
                             <div class="field-div">
                                 <label class="label-field register-h2" for="name">Nombre</label>
                                 <div class="field-text">
-                                    <input type="text" name="name" id="name" required="required" minlength="5"
+                                    <input type="text" name="name" id="name"
                                     value="<%= locals.oldData ? oldData.name : null %>">
                                 </div>
                                 <% if (locals.errors && errors.name) { %>
                                     <div class="text-danger field-text">
                                         <%= errors.name.msg  %> 
                                     </div>
-                                <% } %>
-                               
+                                <% } %>  
                             </div>
-
+                            <div class="field-text error-message error-name"></div>
                             <div class="field-div">
                                 <label class="label-field register-h2" for="price">Precio</label>
                                 <div class="field-text">
-                                    <input type="text" name="price" id="price" required="required" 
+                                    <input type="text" name="price" id="price"
                                     value="<%= locals.oldData ? oldData.price : null %>">
                                 </div>
                                 <% if (locals.errors && errors.price) { %>
                                     <div class="text-danger field-text">
                                         <%= errors.price.msg  %> 
                                     </div>
-                                <% } %>
-                                
+                                <% } %>   
                             </div>
-
+                            <div class="field-text error-message error-price"></div>
                             <div class="field-div">
                                 <label class="label-field register-h2" for="discount_value">Descuento</label>
                                 <div class="field-text">
@@ -51,14 +49,13 @@
                                     <div class="text-danger field-text">
                                         <%= errors.discount_value.msg  %> 
                                     </div>
-                                <% } %>
-                              
+                                <% } %> 
                             </div>
-
+                            <div class="field-text error-message error-discount_value"></div>
                             <div class="field-div">
                                 <label class="label-field register-h2" for="discount">Tiene descuento</label>
                                 <div class="field-text">
-                                    <input type="discount" name="discount" id="discount" required="required"
+                                    <input type="discount" name="discount" id="discount"
                                     value="<%= locals.oldData ? oldData.discount : null %>">
                                 </div>
                                 <% if (locals.errors && errors.discount) { %>
@@ -67,24 +64,24 @@
                                     </div>
                                 <% } %>
                             </div>
-
+                            <div class="field-text error-message error-discount"></div>
                             <div class="field-div">
                                 <label class="label-field register-h2" for="image">Imagen de producto</label>
                                 <div class="field-text">
-                                    <input type="file" name="image" id="image" accept=".png, .jpg, .jpeg, .gif">
+                                    <input type="file" name="image" id="image"
+                                    value="<%= locals.oldData ? oldData.image : null %>">
                                 </div>
-                              
+                                <% if (locals.errors && errors.image) { %>
+                                    <div class="text-danger field-text">
+                                        <%= errors.image.msg  %> 
+                                    </div>
+                                <% } %> 
                             </div>
-                            <% if (locals.errors && errors.image) { %>
-                                <div class="text-danger field-text">
-                                    <%= errors.image.msg  %> 
-                                </div>
-                            <% } %>
-                            
+                            <div class="field-text error-message error-image"></div>
                             <div class="field-div">
                                 <label class="label-field register-h2" for="description">Descripción</label>
                                 <div class="field-text">
-                                    <input type="description" name="description" id="description" required="required" minlength="20"
+                                    <input type="description" name="description" id="description"
                                     value="<%= locals.oldData ? oldData.description : null %>">
                                 </div>
                                 <% if (locals.errors && errors.description) { %>
@@ -93,6 +90,7 @@
                                     </div>
                                 <% } %>  
                             </div>
+                            <div class="field-text error-message error-description"></div>
                             <div class='field-div'>
                                 <label class="label-field register-h2" for="category">Categoría</label>
                                 <select required name="id_category">
@@ -113,5 +111,7 @@
             </section>
         </div>
     </main>
+    <!--incluimos Validaciones -->
+    <script src='/js/products/validationsForm.js'></script> 
 </body>
 </html>

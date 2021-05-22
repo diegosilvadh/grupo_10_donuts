@@ -28,32 +28,41 @@ const controller = {
     },
     store: (req, res) => {
         // Generamos el nuevo Producto
-        const resultValidation = validationResult(req);
+       const resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0) {
-            return res.render('products/create', {
-            errors: resultValidation.mapped(),
-            oldData: req.body
-        });
-        }
-        const { file } = req;
-        let { name, price, discount_value, discount, description, id_category } = req.body;
-        Product.create({
-            name,
-            price,
-            discount_value,
-            discount,
-            description,
-            image: file ? file.filename: image,
-            icon_image: discount == 1 ? "fab fa-hotjar" : "ico-donut.jpg",
-            id_category,
-        })
-        .then (product => {
-            res.render('products/detail', { product });
+            Category.findAll()
+            .then ((categories) => {
+                res.render('products/create', {
+                    errors: resultValidation.mapped(),
+                    oldData: req.body,
+                    categories
+                })
+            })
+        } else {
+            const { file } = req;
+            let { name, price, discount_value, discount, description, id_category } = req.body;
+            Promise.all([
+                Category.findAll(),
+                Product.create({
+                    name,
+                    price,
+                    discount_value,
+                    discount,
+                    description,
+                    image: file ? file.filename: image,
+                    icon_image: discount == 1 ? "fab fa-hotjar" : "ico-donut.jpg",
+                    id_category,
+                })
+            ])
+        .then (([categories, product]) => {
+            res.render('products/detail', { product, categories });
         })
         .catch(err => {
             console.log('ERROR', err)
             return reject(err)
           })
+        }
+        
     },
     show: (req, res) => {
         Promise.all([

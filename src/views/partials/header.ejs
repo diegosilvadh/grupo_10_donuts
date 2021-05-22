@@ -9,7 +9,7 @@
                 <form class="search" method="GET" action="/products/search"> 
                     <input id="input-search" type="text" placeholder="Search your donut" name="keyword">
                     <button id="button-search" disabled><i class="fas fa-search"></i></button>
-            </form> 
+                </form> 
             <div class="icono">
                 
             </div>
@@ -54,22 +54,5 @@
         </ul>
         <% } %>
     </nav>
-    <script>
-        /*
-        - Escuchar cada vez que el usuario escribe una tecla
-        - Habilitar/Deshabilitar el botón de enviar cuando hayan más de 3 caracteres
-        */
-
-        const searchInput = document.querySelector("#input-search")
-        const button = document.querySelector("#button-search")
-
-        searchInput.addEventListener("keyup", function(e) {
-         if (searchInput.value.length >= 3) {
-             button.removeAttribute("disabled")
-         } else {
-             button.setAttribute("disabled", "")
-         }
-        })
-
-     </script>
+    <script src="/js/validationSearch.js"></script>
 </header>
