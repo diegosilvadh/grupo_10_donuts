@@ -48,10 +48,7 @@
 
             errorFirst_name.innerText = 'Debe completar el campo con al menos 3 caracteres';
             errorFirst_name.style.display = "block";
-            errorIconFirst_name.style.display = "block";
             errors = true;
-        } else {
-            successIconFirst_name.style.display = "block";
         }
         if (last_name.value.length < 3) {
             errorLast_name.innerText = 'Debe completar el campo con al menos 3 caracteres';
@@ -75,7 +72,7 @@
             errors = true
 
         }
-        if(!validExtensionFormat.test(avatar.value)) {
+        /* if(!validExtensionFormat.test(avatar.value)) {
                 errorAvatar.innerText = "La extensión no es correcta";
                 errorAvatar.style.display = "block";
                 errors = true;
@@ -84,7 +81,7 @@
                 errorAvatar.innerText = 'Debe Subir una imágen';
                 errorAvatar.style.display = "block";
                 errors = true;
-            }
+            } */
 
         // Enviamos o rejectamos JS Front
         if (errors) {

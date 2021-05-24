@@ -37,7 +37,7 @@
                                 <% } %>
                                 
                             </div>
-                            <% if (locals.session.userLogged) { %>
+                            <% if (locals.session.userLogged && userLogged.id_rol == 1) { %>
                                 <div class="field-div card-content">
                                     <div class="field-text">
                                         <button type="submit" onclick="location.href='/products/<%= product.id_product %>/edit' ">Editar producto</button>

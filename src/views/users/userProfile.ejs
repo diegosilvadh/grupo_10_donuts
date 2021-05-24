@@ -3,7 +3,7 @@
 	<%- include('./../partials/head') %>
     <link rel="stylesheet" href="../css/styles.css">
 <body>
-	<%- include('./../partials/headerUser') %>
+	<%- include('./../partials/header') %>
 	
 	<!-- Container -->
 	<div class="container" style="margin-top: 40px;">
@@ -28,10 +28,12 @@
 			<button class="button-register" type="submit" onclick="location.href='/users/<%= user.id_user %>/editPassword' ">Editá tu Contraseña</button>
 		</div>
 	</div>
-	<div class="field-div">
-		<button class="button-register" type="submit" value="Submit">Creá un nuevo Producto</button>
-	</div>
-	<!-- //Container -->
+
+	<!-- <% if (user.id_rol == 1) { %>
+		<div class="field-div">
+			<button class="button-register" type="submit" value="Submit">Creá un nuevo Producto</button>
+		</div>
+	<% } %> -->
 	
 	<%- include('./../partials/footerUser') %>
 </body>

@@ -34,15 +34,14 @@
             <li><a href="/products/productCart">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
         </ul>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <!--
-            <a>
-            <img src="/img/users/dona-choco.jpg" width="40" style="border-radius: 100%;">
-            Hola 
-            </a>
-            -->
             <a class="dropdown-item" href="/users/profile">My profile </a>
             <li><hr class="dropdown-divider"></li>
-            <a class="dropdown-item" href="/users/"> Usuarios </a>
+             <% if (userLogged.id_rol == 1) { %>
+                <a class="dropdown-item" href="/users/"> Usuarios </a>
+                <li><hr class="dropdown-divider"></li>
+                <a class="dropdown-item" href="/products/"> Productos </a>
+             <% } %>
+            
             <li><hr class="dropdown-divider"></li>
             <a class="dropdown-item" href="/users/logout"> Logout</a>
             

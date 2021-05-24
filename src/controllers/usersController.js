@@ -124,7 +124,7 @@ const controller = {
                     password, 
                 })
             .then  (() => {
-                res.render('users/detail', { user });
+                res.render('users/userProfile', { user });
             })
             .catch(err => {
                 console.log('ERROR', err)

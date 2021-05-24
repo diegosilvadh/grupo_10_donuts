@@ -9,11 +9,15 @@ const { Op } = require("sequelize");
 
 const controller = {
     index: (req, res) => {
-        Product.findAll()
-            .then(products => {
+        Promise.all([
+           Product.findAll(),
+           Category.findAll()
+        ])
+            .then(([products, categories]) => {
                 res.render('products/index', { 
                     title: 'Listado de Productos', 
-                    products      
+                    products,
+                    categories,      
                 });
             })
         

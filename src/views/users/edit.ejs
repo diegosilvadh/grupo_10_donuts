@@ -47,19 +47,24 @@
                         </div>
                         <div class="field-div">
                             <label class="label-field register-h2" for="avatar">Imagen de usuario</label>
-                            <input class="field-text" type="file" name="avatar" id="avatar">
+                            <input class="field-text" type="file" name="avatar" id="avatar"
+                            value="<%= user.avatar %>"> 
                         </div>
-                        <div class="error-message error-avatar"></div>
+                        <% if (locals.errors && errors.avatar) { %>
+                            <div class="text-danger field-text">
+                                <%= errors.avatar.msg  %> 
+                            </div>
+                        <% } %>
                             <div class="field-div">
                                 <div class="field-text">
-                                    <button type="submit">Editar usuario</button>
+                                    <button class="button-register" type="submit">Editar usuario</button>
                                 </div>
                             </div>
                         </form>
                         <div class="field-div">
                             <div class="field-text">
                                 <form class="field-div" action="/users/<%= user.id_user %>?_method=delete" method="POST">
-                                <button>Borrar usuario</button>
+                                <button class="button-register">Borrar usuario</button>
                                 </form> 
                             </div>
                         </div>
