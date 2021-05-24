@@ -734,6 +734,29 @@ p em strong{
         gap: 10px;
     }
 
+    .card{
+        width: 100%;
+        flex-basis: 50%;
+      }
+
+    .card_img{
+        margin: auto 30px auto 15px;
+        width: 100%;
+        flex-basis: 15%;
+      }
+    .card_img img{
+        margin: 10px 0;
+        border-radius: 10%;
+        width: 100%;
+        max-width: 150px;
+      }
+      .admin{
+        flex-basis: 35%;
+        align-self: space-between;
+        margin: 10px  0;
+        width: 100%;
+      }
+
 
 
 @media (min-width:380px){

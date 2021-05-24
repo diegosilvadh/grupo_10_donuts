@@ -38,6 +38,7 @@ router.get('/', authMiddleware, usersController.index);
 router.get('/logout', usersController.logout);
 router.get('/:id', authMiddleware, usersController.show);
 router.get('/:id/edit', authMiddleware, usersController.edit);
+router.get('/:id/editPassword', authMiddleware, usersController.editPassword);
 router.put('/:id', upload.single('avatar'), usersController.update);
 router.delete('/:id', usersController.destroy);
 

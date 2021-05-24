@@ -14,58 +14,42 @@
                 <section>
                     <h2 class="title-h2">Edita tu usuario</h2>
                     <div >
-        <!-- Menu en Base de datos --> 
-                        <form action="/users/<%= user.id_user %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
+                        <form action="/users/<%= user.id_user %>?_method=PUT" method="POST" id="form-register" enctype="multipart/form-data"> 
                             <div class="field-div">
-                                <label for="id">Id</label>
-                                <div class="field-text">
-                                    <input type="text" name="id" id="id" value="<%= user.id_user %>" readonly>
-                                </div> 
+                                <label class="label-field register-h2" for="id">Id</label>
+                                <input class="field-text" type="text" name="id" id="id" value="<%= user.id_user %>" readonly>
                             </div>
                             <div class="field-div">
-                                <label for="first_name">Nombre</label>
-                                <div class="field-text">
-                                    <input type="text" name="first_name" id="first_name" value="<%= user.first_name %>">
-                                </div>
+                                <label class="label-field register-h2" for="first_name">Nombre</label>
+                                <input class="field-text" type="text" name="first_name" id="first_name" value="<%= user.first_name %>">
                             </div>
+                            <div class="error-message error-first_name"></div>
                             <div class="field-div">
-                                <label for="last_name">Apellido</label>
-                                <div class="field-text">
-                                    <input type="text" name="last_name" id="last_name" value="<%= user.last_name %>">
-                                </div>
+                                <label class="label-field register-h2" for="last_name">Apellido</label>
+                                <input class="field-text" type="text" name="last_name" id="last_name" value="<%= user.last_name %>">
                             </div>
+                            <div class="error-message error-last_name"></div>
                             <div class="field-div">
-                                <label for="username">Username</label>
-                                <div class="field-text">
-                                    <input type="text" name="username" id="username" value="<%= user.username %>">
-                                </div>
+                                <label class="label-field register-h2" for="username">Username</label>
+                                <input class="field-text" type="text" name="username" id="username" value="<%= user.username %>">
                             </div>
+                            <div class="error-message error-username"></div>
                             <div class="field-div">
-                                    <label for="birthday">Fecha de Nacimiento</label>
-                                    <div class="field-text">
-                                        <input type="date" name="birthday" id="birthday" value="<%= user.birthday %>">
-                                    </div>
+                                    <label class="label-field register-h2" for="birthday">Fecha de Nacimiento</label>
+                                    <input class="field-text" type="date" name="birthday" id="birthday" value="<%= user.birthday %>">
                             </div>
+                            <div class="error-message error-birthday"></div>
                             <div class="field-div">
-                                    <label for="email">Dirección Electrónica</label>
-                                    <div class="field-text">
-                                        <input type="email" name="email" id="email" value="<%= user.email %>">
-                                    </div>
+                                    <label class="label-field register-h2" for="email">Dirección Electrónica</label>
+                                    <input class="field-text" type="email" name="email" id="email" value="<%= user.email %>">
                             </div>
-                            <div class="field-div">
-                                    <label for="password">Password</label>
-                                    <div class="field-text">
-                                        <input type="password" name="password" id="password" value="<%= user.password %>">
-                                    </div>
-                            </div>
+                            <div class="error-message error-email"></div>
                         </div>
                         <div class="field-div">
-                            <label for="avatar">Imagen de usuario</label>
-                            <div class="field-text">
-                                <input type="file" name="avatar" id="avatar">
-                            </div>
-                          
+                            <label class="label-field register-h2" for="avatar">Imagen de usuario</label>
+                            <input class="field-text" type="file" name="avatar" id="avatar">
                         </div>
+                        <div class="error-message error-avatar"></div>
                             <div class="field-div">
                                 <div class="field-text">
                                     <button type="submit">Editar usuario</button>
@@ -79,8 +63,6 @@
                                 </form> 
                             </div>
                         </div>
-                            
-       <!-- Fin Menu en Base de datos -->
                     </div>
                 </section>
             </div>
@@ -88,5 +70,7 @@
 
     <!--incluimos partials del footer-->
     <%- include('./../partials/footer') %>
+    <!--incluimos Validaciones-->
+    <script src='/js/users/validationsUserEdit.js'></script>
     </body>
 </html>

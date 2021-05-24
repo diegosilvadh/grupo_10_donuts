@@ -9,6 +9,7 @@ const path = require('path');
 const validateProductMiddleware = require('../middlewares/validateProductMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
+const maintenanceMiddleware = require('../middlewares/maintenanceMiddleware');
 
 const multer = require('multer');
 const storage = multer.diskStorage({
@@ -24,7 +25,7 @@ const upload = multer({ storage });
 
 //router.get('/create', authMiddleware, productsController.create);
 router.get('/create', authMiddleware, productsController.create);
-router.get('/promotions', productsController.promotions);
+router.get('/promotions', maintenanceMiddleware, productsController.promotions);
 router.get('/productCart', productsController.productCart);
 router.get('/search', productsController.search);
 router.get('/:id', productsController.show);

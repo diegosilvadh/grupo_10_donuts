@@ -93,9 +93,23 @@ const controller = {
             })
 
     },
+    editPassword: (req, res) => {
+        User.findByPk(req.params.id)
+            .then(user => {
+                if ( user ) {
+                    res.render('users/editPassword', { user });
+                } else {
+                    res.send('No encontré el usuario');
+                }
+            })
+
+    },
     update: (req, res) => {
         const { file } = req;
-        const { first_name, last_name, username, birthday, email } = req.body;
+        let { first_name, last_name, username, birthday, email, password } = req.body;
+        if(password) {
+            password = bcrypt.hashSync(password);
+        }
         User.findOne({
             where: {id_user: req.params.id},    
             })
@@ -106,7 +120,8 @@ const controller = {
                     username,
                     birthday,
                     email,
-                    avatar: file ? file.filename: user.avatar, 
+                    avatar: file ? file.filename: user.avatar,
+                    password, 
                 })
             .then  (() => {
                 res.render('users/detail', { user });
