@@ -4,7 +4,6 @@ const db = require('../../database/models');
 
 const controller = {
     index: (req, res) => {
-        //let products = productsTable.all()
         db.User.findAll()
             .then(function(users){
                 const response = {
