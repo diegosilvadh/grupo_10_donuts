@@ -79,7 +79,7 @@ Link: https://trello.com/b/8hQAiywm/grupo10donuts
 
 Si tenes ganas de ver como viene el proyecto y tenes comentarios:
 
-https://grupo10donuts.herokuapp.com/
+https://grupo10donuts.herokuapp.com/ (deprecated)
 
 ## Levantar servicio
 
