@@ -36,13 +36,21 @@ const controller = {
                 }
             });
                 const response = {
-                    meta: { count: products.length,
-                        donasGlaseadas: donasGlaseadas,
-                        donasRellenas: donasRellenas,
-                        donasGourmet: donasGourmet,
-                        donasSaludables: donasSaludables,
-                        donasAptosCeliacos: donasAptosCeliacos,
-                        Bunuelos: Bunuelos
+                    meta: { 
+                                count: { count: products.length,
+                                    name: 'Total de Donas'},
+                                donasGlaseadas: {count: donasGlaseadas,
+                                         name: 'Donas Glaseadas'},
+                                donasRellenas: {count: donasRellenas,
+                                        name: 'Donas Rellenas'},
+                                donasGourmet: {count: donasGourmet,
+                                        name: 'Donas Gourmet'},
+                                donasSaludables: {count: donasSaludables,
+                                           name: 'Donas Saludables'},
+                                donasAptosCeliacos: {count: donasAptosCeliacos,
+                                            name: 'Donas Aptos Celíacos'},
+                                Bunuelos: { count: Bunuelos,
+                                    name: 'Buñuelos'},
                     },
                     results: products.map(product => {
                         let productObject = {

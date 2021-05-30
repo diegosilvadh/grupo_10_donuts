@@ -9,27 +9,72 @@ body{
     background-color:white;
 }
 
+.dropdown-divider {
+    background-color: #e84393;
+}
+
 .main-header {
-    background-color: #ff7fbf; /* Cambio color: #fa71b5, e50072, ff3298, #ff7fbf */
+    background-color: #e84393; /* Cambio color: #fa71b5, e50072, ff3298, #ff7fbf */
     padding: 10px; /* Cambio Padding */
     position: relative;
     top: 0;
     z-index: 100;
 }
 .hamburguer-button{
-    background-color: #03264C;
+    background-color: #74337a;
+    text-align: center;
     color: #ffffff;
     display: block;
     max-width: 50px;
     padding: 15px 0px;
     border-radius: 8px;
-    text-align: center;
     font-size: 18px;
     margin: auto;
 }
 .logo {
     width: 6rem;
     height: 6rem;
+}
+
+/* Responsive Hamburguer*/
+
+.responsive-nav{
+    transition: 0.10s;
+    display: none;
+    height: 30%; 
+    width: 30%; 
+    z-index: 1;
+    background-color: #74337a;
+    color: white;
+    border-radius: 8px;
+    /*top: 0; */
+    left: 35%; 
+    position: fixed;
+    /*overflow-x: hidden; */
+    padding-top: 15px;
+    font-size: 1.1em;
+    
+}
+.responsive-nav ul li{
+    display: block;
+}
+.responsive-nav a{
+    color: white;
+}
+
+.responsive-nav a:hover{
+    color: #e7badb;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 1.15em;
+}
+
+.showResponsiveNav {
+    display: block;
+}
+
+.hiddeResponsiveNav {
+    display: none;
 }
 
 .main-navbar {
