@@ -80,3 +80,16 @@ Link: https://trello.com/b/8hQAiywm/grupo10donuts
 Si tenes ganas de ver como viene el proyecto y tenes comentarios:
 
 https://grupo10donuts.herokuapp.com/
+
+## Levantar servicio
+
+npx nodemon src/app.js o npm src/app.js
+Puerto Default 3000
+
+## Script para Crear Base de Datos
+
+En la carpeta sql encontrarás:
+
+1. donas-schema.sql ( Esto te armará la estructura de la base)
+2. donas-data.sql ( Esto poblará la base con información)
+3. DERDonas.pdf ( Verás la relación entre las tablas)
